@@ -1,0 +1,139 @@
+.back-link {
+    font-size: large;
+    display: block;
+    text-decoration: none;
+    color: #1a1f16;
+    font-weight: bold;
+    position: absolute;
+    left: 11rem;
+    top: 50px;
+  }
+  
+  
+  .product-list {
+    margin-left: 10rem;
+    margin-right: 25rem;
+    /* background-color: red; */
+    position: relative;
+    font-family: sans-serif;
+  }
+  
+  .product {
+    display: flex;
+    margin-top: 10%;
+    /* background-color: pink; */
+  }
+  
+  /* .product-details { */
+    /* Add styles to display product-details to the right */
+    /* margin-left: 25px; Add some space between product-details and Container */
+  /* } */
+  
+  .Container {
+    display: flex;
+    justify-content: space-between; /* Ensure product-details is to the right */
+    width: 100%;
+    height: auto;
+  }
+  
+  .bigImage {
+    margin-left: 2rem;
+    border-radius: 11px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .smallImg {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 1rem;
+    /* background-color: red; */
+  }
+  
+  .smallImage {
+    width: 3rem; /* Adjust the width as needed */
+    height: 58px; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Add some space between images */
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .product-details{
+    margin-left: 5rem;
+  }
+  
+  .product-details h1 {
+    font-size: 3rem;
+    margin-top: -0.1px; /* Use negative margin-top to move the element up */
+    /* width: 70%; */
+    
+  }
+
+  .product-des{
+    width: 90%;
+  }
+  
+  .button2 {
+    margin-left: 56rem; /* Adjust margin based on your layout */
+    margin-top: 30px; /* Adjust margin based on your layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px; /* Adjust padding for better proportion */
+    gap: 8px; /* Adjust gap between icon and text */
+    background: #1a1f16;
+    border-radius: 17px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    width: 12%;
+  }
+
+  .button2 .cart-icon {
+    height: 20px; /* Adjust icon height as needed */
+  }
+
+  .button2 span {
+    color: white;
+    font-size: 20px;
+  }
+  
+    /* Grey Line */
+.grey-line {
+    position: absolute;
+    top: 4rem;
+    right: 22rem;
+    width: 5px; /* Adjust the width as needed */
+    height: 115%;
+    background-color: grey;
+    border-radius: 10%;
+  }
+
+/* Grey Line */
+.grey-line2 {
+    position: absolute;
+    top: 33rem;
+    right: 29%;
+    width: 60%; /* Adjust the width as needed */
+    height: 3px;
+    background-color: grey;
+    border-radius: 10%;
+    }
+  
+  .paragraph {
+    margin-left: 11rem;
+    margin-right: 25rem;
+    font-family: sans-serif;
+  }
+  
+  /* .paragraph h1 {
+    margin-top: 62px;
+    margin-bottom: 10px;
+  } */
+  
+  /* .paragraph p{
+    font-size: 28px;
+    
+  } */
+  
