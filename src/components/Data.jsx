@@ -6,6 +6,7 @@ import iphonewhite from "../assets/Name=Iphone-12-04.jpg";
 import iphonered from "../assets/Name=Iphone-12-03.jpg";
 import stars from "../assets/Special.png";
 
+// Defining data as an array of objects where each object represents a product
 const data = [
   {
     id: 1,
