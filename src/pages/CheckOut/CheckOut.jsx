@@ -74,7 +74,11 @@ function CheckOut() {
         <p>
           <img src={giftIcon}alt="gift-icon" /></img>$53.21 Gift card balance
         </p>
-
+        <div className="checkbox">
+          <input type="checkbox" id="giftCheckbox" name="giftCheckbox" />
+          <label for="giftCheckbox">Billing adess same as Shipping adress</label>
+        </div>
+        <div className="btn">{/* <button>Change</button> */}</div>
       </div>
 
     </div>
