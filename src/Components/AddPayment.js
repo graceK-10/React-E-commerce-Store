@@ -2,7 +2,7 @@ import cards from "../Assets/card-svg.svg"
 import "../Components/AddPayment.css"
 import lock from "../Assets/lock.svg"
 
-function AddPayment() {
+function AddPayment() { //renders a simple interface for selecting and adding a payment card. 
   return (
     <>
     <div className="container">
@@ -11,3 +11,12 @@ function AddPayment() {
         <p><img src={cards} alt=""></img>MasterCard ending in 4242</p>
         <p><img src={cards} alt=""></img>VISA Debit ending in 2894</p>
       </div>
+      <div className="bottom-container">
+          <form>
+           <h1>ADD A NEW CARD</h1>
+            <div className="form-group">
+              <div className="card">
+                <label htmlFor="name">Name</label>
+                <input type="text" id="name" placeholder="John Maker" />
+              </div>
+            </div>

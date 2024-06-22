@@ -5,10 +5,7 @@
   align-items: center; 
   margin-top: 5%;
   font-family: sans-serif;
-
-  
 }
-
 .top-container {
   border: 2px solid rgba(0, 0, 0, 0); 
   padding: 20px; 
@@ -18,4 +15,29 @@
   align-items: flex-start; 
   border-radius: 0.7em;
   width: 50%;
+}
+.bottom-container {
+  border: 2px solid rgba(0, 0, 0, 0); 
+  padding: 20px; 
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  border-radius: 0.7em;
+  width: 50%;
+  margin-top: 30px;
+}
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.card input {
+  border: 1px solid #d9d9d9;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42rem;
+  height: 3.5rem;
 }
