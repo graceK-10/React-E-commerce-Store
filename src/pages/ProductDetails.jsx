@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import MenuSidebar from "../components/MenuSidebar";
-// import SideBar2 from "./Sidebar2";
+import Bagsidebar from "../components/Bagsidebar";
 import { Link } from "react-router-dom";
 import "../css/ProductDetails.css";
 import cart from "../assets/addcart.svg";
@@ -19,14 +19,17 @@ const ProductDetails = () => {
   return (
     <>
       <MenuSidebar />
-      <Link to="/" className="back-link">
+      <Link
+        to="/"
+        className="font-cabin back-link text-lg block font-bold text-[#1a1f16] absolute left-[11rem] top-[50px]"
+      >
         &lt;&nbsp;&nbsp;Back
       </Link>
-      <div className="product-list">
+      <div className="product-list relative ml-[10rem] mr-[25rem] font-sans">
         {/* Render item details */}
         <div className="product" key={item.id}>
           {/* Render images */}
-          <div className="Container">
+          <div className="container flex justify-between w-full">
             <div className="smallImg">
               {/* Render small images */}
               <img
@@ -81,7 +84,7 @@ const ProductDetails = () => {
         </p>
         {/* second part of detailed */}
       </div>
-      {/* <SideBar2 selectedItem={clickedItem} /> */}
+      <Bagsidebar selectedItem={clickedItem} />
     </>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import SideBar2 from "./Bagsidebar";
-import "../css/ShoppingBag.css";
+import Bagsidebar from "../components/Bagsidebar";
+// import "../css/ShoppingCart.css";
 import SideBar from "./MenuSidebar";
 import plus from "../assets/Increase-Button.svg";
 import minus from "../assets/Decrease-Button.svg";
@@ -78,7 +78,7 @@ function Bag() {
         </div>
       </div>
 
-      <SideBar2 />
+      <Bagsidebar />
     </>
   );
 }

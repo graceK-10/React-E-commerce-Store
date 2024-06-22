@@ -82,15 +82,11 @@ const SideBar2 = ({ selectedItem }) => {
     window.addEventListener("beforeunload", clearLocalStorageOnRefresh);
 
     return () => {
-      window.removeEventListener(
-        "beforeunload",
-        clearLocalStorageOnRefresh
-      );
+      window.removeEventListener("beforeunload", clearLocalStorageOnRefresh);
     };
   }, []);
 
   return (
-
     <div className="bag-area">
       <div className="title">
         <h3>bag</h3>
@@ -109,9 +105,7 @@ const SideBar2 = ({ selectedItem }) => {
         ))}
       </div>
       {location.pathname === "/bag" && ( // Render total only on bag page
-        <div className="total-price">
-          Bag Total: ${totalPrice.toFixed(2)}
-        </div>
+        <div className="total-price">Bag Total: ${totalPrice.toFixed(2)}</div>
       )}
       {location.pathname === "/bag" ? (
         <Link to="/checkout" className="button">
