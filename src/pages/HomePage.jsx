@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MenuSidebar from "../components/MenuSidebar";
+import Bagsidebar from "../components/Bagsidebar";
 import data from "../components/Data";
 import bagadd from "../assets/Bag add.svg";
 import "../index.css";
@@ -131,7 +132,7 @@ const HomePage = () => {
       </div>
       {/* Grey line to the right of content area */}
       <div className="absolute top-16 right-[20rem] w-[5px] h-[115%] bg-gray-400"></div>{" "}
-      {/* <SideBar2 selectedItem={clickedItem} /> Sidebar 2 component */}
+      <Bagsidebar selectedItem={clickedItem} />
     </>
   );
 };
