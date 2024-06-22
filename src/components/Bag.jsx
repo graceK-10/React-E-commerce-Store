@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SideBar2 from "./Sidebar2";
 import "../css/ShoppingCart.css";
-import SideBar from "./sidemenu";
+import SideBar from "./MenuSidebar";
 import plus from "../Assets/Increase-Button.svg";
 import minus from "../Assets/Decrease-Button.svg";
 
