@@ -17,11 +17,13 @@ function CheckOut() {
     products.map(product => ({ ...product, quantity: 1 }))
   );
 
+  // State to store subtotal, shipping, GST, and gift card values
   const [items,setItems] = useState(0);
   const [shipping, setShipping] = useState(0);
   const [gst, setGst] = useState(0);
   const [giftCard, setGiftCar] = useState(0);
 
+  // Function to update quantity of a products
   const updateQuantity = (productId, increment) => {
     setProductsState(prevProducts => {
       const newProducts = [...prevProducts];
@@ -32,6 +34,9 @@ function CheckOut() {
       return newProducts;
     });
   };
+
+  const totalPrice = productsState.reduce((acc, product) => acc + product.price * product.quantity, 0);
+  setItems(totalPrice);
 
   const incrementQuantity = productId => updateQuantity(productId,true);
   const decreamentQuantity = productId => updateQuantity(productId,false)
