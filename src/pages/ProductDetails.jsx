@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import MenuSidebar from "../components/MenuSidebar";
-// import SideBar2 from "./Sidebar2";
+import Bagsidebar from "../components/Bagsidebar";
 import { Link } from "react-router-dom";
 import "../css/ProductDetails.css";
 import cart from "../assets/addcart.svg";
@@ -81,7 +81,7 @@ const ProductDetails = () => {
         </p>
         {/* second part of detailed */}
       </div>
-      {/* <SideBar2 selectedItem={clickedItem} /> */}
+      <Bagsidebar selectedItem={clickedItem} />
     </>
   );
 };
