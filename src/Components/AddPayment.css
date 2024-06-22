@@ -41,3 +41,9 @@
   width: 42rem;
   height: 3.5rem;
 }
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}

@@ -1,12 +1,14 @@
-import React from 'react';
-import PaymentForm from './Components/AddPayment';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AddPayment from "./Components/AddPayment";
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <PaymentForm />
-    </div>
+    <Router>
+      <Routes>
+      <Route path="/AddPayment" element={<AddPayment />} />
+      </Routes>
+      </Router>
   );
-};
+}
 
 export default App;

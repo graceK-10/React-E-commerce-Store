@@ -20,3 +20,9 @@ function AddPayment() { //renders a simple interface for selecting and adding a 
                 <input type="text" id="name" placeholder="John Maker" />
               </div>
             </div>
+            <div className="form-group">
+              <div className="card">
+                <label htmlFor="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" placeholder="5126-5987-2214-7621" />
+              </div>
+            </div>
