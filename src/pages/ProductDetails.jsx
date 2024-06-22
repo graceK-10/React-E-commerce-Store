@@ -3,7 +3,7 @@ import MenuSidebar from "../components/MenuSidebar";
 // import SideBar2 from "./Sidebar2";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-// import "../css/ProductDetails.css";
+import "../css/ProductDetails.css";
 import cart from "../assets/addcart.svg";
 import stars from "../assets/Special.png";
 
