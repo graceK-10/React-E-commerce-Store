@@ -51,8 +51,16 @@ function CheckOut() {
   const incrementQuantity = productId => updateQuantity(productId,true);
   const decreamentQuantity = productId => updateQuantity(productId,false)
 
-  const tatal
+  const total = items + shipping + gst - giftCard;
+
+  return (
+    <div className="container">
+      
+    </div>
+  )
 }
+
+
   
 
 export default CheckOut;
