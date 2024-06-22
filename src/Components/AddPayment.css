@@ -51,5 +51,32 @@
   flex-wrap: wrap;
   margin-right: 40px;
   margin-bottom: 20px;
-  
+  }
+.top-ccontainer p {
+  margin: 10px 0; 
+  color: gray;
+  display: flex; 
+  align-items: center; 
+}
+label {
+  color: #3d3d3d;
+  display: block;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: 1rem;
+}
+.button6{
+  height: 5rem;
+  margin-top: 3rem;
+  margin-left: 2.5rem;
+}
+.button6{
+  width: 40rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: black;
+  color: white;
 }
