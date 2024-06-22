@@ -2,8 +2,8 @@
 import React from 'react';
 import plus from '../../assets/Plus-Button.svg';
 import minus from '../../assets/Minus-Button.svg';
-import BlackCard from '../../assets/Black-card.svg';
-import BlackGift from '../../assets/Black-gift.svg';
+import cardIcon from '../../assets/Card-Icon.svg';
+import giftIcon from '../../assets/Gift-Icon.svg';
 import './CheckOut.css'
 
 //importing React Hooks and components
@@ -57,13 +57,26 @@ function CheckOut() {
     <div className="container">
       {/*shipping adress section*/}
       <div className="first-container">
-        <h1>Shipping Adress</h1>
+        <h1>SHIPPING ADRESS</h1>
         <p>John Maker</p>
         <p>123 Plae Grond Street</p>
         <p>Vermont, California</p>
         <p>United States of America</p>
         <div className="btn">Change</div>
       </div>
+
+      {/* Payment method section */}
+      <div className="second-container">
+        <h1>PAYMENT METHOD</h1>
+        <p>
+          <img src={cardIcon} alt="card-icon" /></img>MasterCard ending in 1252
+        </p>
+        <p>
+          <img src={giftIcon}alt="gift-icon" /></img>$53.21 Gift card balance
+        </p>
+
+      </div>
+
     </div>
   )
 }
