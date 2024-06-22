@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import SideBar2 from "./Sidebar2";
+import SideBar2 from "./Bagsidebar";
 import "../css/ShoppingBag.css";
 import SideBar from "./MenuSidebar";
 import plus from "../Assets/Increase-Button.svg";
