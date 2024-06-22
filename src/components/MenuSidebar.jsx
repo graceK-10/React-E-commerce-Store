@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import menu from "../assets/Menu.svg";
-import closeMenu from "../assets/CloseMenu.svg";
-import home from "../assets/Home.svg";
-import closeHome from "../assets/CloseHome.svg";
-import bag from "../assets/Bag.svg";
-import closeBag from "../assets/CloseBag.svg";
-import navlink from "../assets/NavLink.svg";
-import closeNavLink from "../assets/CloseNavLink.svg";
-import logo from "../assets/Logo.svg";
+import menu from "../Assets/Menu.svg";
+import closeMenu from "../Assets/CloseMenu.svg";
+import home from "../Assets/Home.svg";
+import closeHome from "../Assets/CloseHome.svg";
+import bag from "../Assets/Bag.svg";
+import closeBag from "../Assets/CloseBag.svg";
+import navlink from "../Assets/NavLink.svg";
+import closeNavLink from "../Assets/CloseNavLink.svg";
+import logo from "../Assets/Logo.svg";
 
 const MenuSidebar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
