@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../css/SideBar2.css";
+import "../css/Bag.css";
 import cart from "../Assets/addcart.svg";
 import { Link, useLocation } from "react-router-dom";
 
