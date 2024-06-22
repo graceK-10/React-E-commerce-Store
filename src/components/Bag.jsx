@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Bagsidebar from "../components/Bagsidebar";
-// import "../css/ShoppingCart.css";
+// import "../css/ShoppingBag.css";
 import SideBar from "./MenuSidebar";
 import plus from "../assets/Increase-Button.svg";
 import minus from "../assets/Decrease-Button.svg";
