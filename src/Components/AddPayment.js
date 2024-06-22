@@ -26,3 +26,9 @@ function AddPayment() { //renders a simple interface for selecting and adding a 
                 <input type="text" id="cardNumber" placeholder="5126-5987-2214-7621" />
               </div>
             </div>
+            <div className="form-group">
+            <div className="Date">
+             <label>Expiry Date</label>
+             <input type="text" id="Date" placeholder="MM/YYYY" />
+            </div>
+             {/* divided form into groups using div elements with classes form-group and card. */}
