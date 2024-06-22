@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import SideBar2 from "./Bagsidebar";
 import "../css/ShoppingBag.css";
 import SideBar from "./MenuSidebar";
-import plus from "../Assets/Increase-Button.svg";
-import minus from "../Assets/Decrease-Button.svg";
+import plus from "../assets/Increase-Button.svg";
+import minus from "../assets/Decrease-Button.svg";
 
 function Bag() {
   // eslint-disable-next-line
