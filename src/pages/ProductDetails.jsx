@@ -2,24 +2,24 @@ import React, { useState } from "react";
 import MenuSidebar from "../components/MenuSidebar";
 // import SideBar2 from "./Sidebar2";
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import "../css/ProductDetails.css";
 import cart from "../assets/addcart.svg";
 import stars from "../assets/Special.png";
+import { useLocation } from "react-router-dom";
 
 const ProductDetails = () => {
   const location = useLocation();
   const { item } = location.state;
-  const [filteredItems, setFilteredItems] = useState(null);
+  const [clickedItem, setClickedItem] = useState(null);
 
-  const handleHomeInputChange = () => {
-    setFilteredItems(item);
+  const handleClick = () => {
+    setClickedItem(item);
   };
 
   return (
     <>
       <MenuSidebar />
-      <Link to="/" className="back-link font-cabin">
+      <Link to="/" className="back-link">
         &lt;&nbsp;&nbsp;Back
       </Link>
       <div className="product-list">
@@ -66,7 +66,7 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
-      <div className="button2" onClick={handleHomeInputChange}>
+      <div className="button2" onClick={handleClick}>
         <img src={cart} alt="Logo" className="cart-icon" />
         <span>Add to Bag</span>
       </div>
@@ -82,7 +82,7 @@ const ProductDetails = () => {
         </p>
         {/* second part of detailed */}
       </div>
-      {/* <SideBar2 selectedItem={filteredItems} /> */}
+      {/* <SideBar2 selectedItem={clickedItem} /> */}
     </>
   );
 };
