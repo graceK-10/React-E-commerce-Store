@@ -8,6 +8,7 @@ import bag from "../assets/Bag.svg";
 import closeBag from "../assets/CloseBag.svg";
 import navlink from "../assets/NavLink.svg";
 import closeNavLink from "../assets/CloseNavLink.svg";
+import logo from "../assets/Logo.svg";
 
 const MenuSidebar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,9 +29,12 @@ const MenuSidebar = () => {
           isMenuOpen ? "open" : ""
         } flex flex-col justify-center items-center p-2 gap-8 transition-width duration-300`}
       >
+        {/* Logo Icon */}
         <div className="logo flex justify-center items-center p-2 rounded-md">
-          <img src={isMenuOpen ? closeMenu : menu} alt="Logo" />
+          <img src={logo} alt="Logo" />
         </div>
+
+        {/* Hamburger Menu Icon */}
         <div className="menu">
           <div
             className="flex items-center p-2 gap-2"
@@ -39,6 +43,8 @@ const MenuSidebar = () => {
             <img src={isMenuOpen ? closeMenu : menu} alt="Menu Icon" />
           </div>
         </div>
+
+        {/* Home Icon */}
         <div className="home">
           <Link to="/">
             <img
