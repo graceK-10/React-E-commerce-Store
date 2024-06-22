@@ -98,17 +98,6 @@
     color: white;
     font-size: 20px;
   }
-  
-    /* Grey Line */
-.grey-line {
-    position: absolute;
-    top: 4rem;
-    right: 22rem;
-    width: 5px; /* Adjust the width as needed */
-    height: 115%;
-    background-color: grey;
-    border-radius: 10%;
-  }
 
 /* Grey Line */
 .grey-line2 {
