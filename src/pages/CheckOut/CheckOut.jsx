@@ -35,11 +35,23 @@ function CheckOut() {
     });
   };
 
+  // to alculate subtotal, shipping, GST, and gift card values
   const totalPrice = productsState.reduce((acc, product) => acc + product.price * product.quantity, 0);
   setItems(totalPrice);
 
+  const totalShipping = 10;
+  setShipping(totalShipping);
+  const totalGst = totalPrice * 0.10;
+  setGst(totalGst);
+  const totalGiftCard = 20;
+  setGiftCard(totalGiftCard);
+};
+
+//funtion to increament and to decreament quantity
   const incrementQuantity = productId => updateQuantity(productId,true);
   const decreamentQuantity = productId => updateQuantity(productId,false)
+
+  const tatal
 }
   
 
