@@ -126,4 +126,4 @@ const SideBar2 = ({ selectedItem }) => {
   );
 };
 
-export default Bagsidebar;
+export default SideBar2;
