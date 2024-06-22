@@ -55,7 +55,15 @@ function CheckOut() {
 
   return (
     <div className="container">
-      
+      {/*shipping adress section*/}
+      <div className="first-container">
+        <h1>Shipping Adress</h1>
+        <p>John Maker</p>
+        <p>123 Plae Grond Street</p>
+        <p>Vermont, California</p>
+        <p>United States of America</p>
+        <div className="btn">Change</div>
+      </div>
     </div>
   )
 }
