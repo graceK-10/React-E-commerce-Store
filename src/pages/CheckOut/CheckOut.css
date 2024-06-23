@@ -67,3 +67,26 @@
     width: 4rem;
     margin-left: 90%;
 }
+
+hr {
+    width: 100%;
+    background-color: #7a7a7ab8;
+    height: 1px;
+    margin-left: 0px;
+}
+
+.top-container {
+    background-color: #ffff;
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    align-items: flex-start;
+    border-radius: 0.5rem;
+    width: 62%;
+    margin-right: 25%;
+
+}
+
+
+
