@@ -3,13 +3,124 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  margin-top: 4%;
+  margin-top: 5%;
   font-family: sans-serif;
   
 }
 
 
-/* bottom container */
+.top-container {
+  border: 2px solid rgba(0, 0, 0, 0); 
+  padding: 20px; 
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  border-radius: 0.7em;
+  width: 60%;
+  margin-right: 25%;
+ 
+}
+
+.top-container p {
+  margin: 10px 0; 
+  color: gray;
+  display: flex; 
+  align-items: center; 
+  margin-left: 15px;
+}
+
+.top-container h1 {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin-left: 15px;
+}
+
+.middle-container {
+  border: 2px solid rgba(0, 0, 0, 0); 
+  padding: 20px; 
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  border-radius: 0.7em;
+  width: 60%;
+  margin-right: 25%;
+  margin-top: 25px;
+
+}
+
+.middle-container p {
+  margin: 10px 0; 
+  color: gray;
+  display: flex; 
+  align-items: center; 
+  margin-left: 15px;
+}
+
+.middle-container h1 {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin-left: 15px;
+}
+
+.middle-container img {
+  margin-right: 10px;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid black;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+
+.checkbox input[type="checkbox"]:checked {
+  background-color: rgb(5, 59, 9);
+}
+
+
+.checkbox label {
+  font-weight: bold;
+  color: black;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+.bottom-container {
+  border: 2px solid rgba(0, 0, 0, 0); 
+  padding: 20px; 
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  border-radius: 0.7em;
+  width: 60%;
+  margin-right: 25%;
+  margin-top: 25px;
+  
+}
+
+.bottom-container h1 {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin-left: 15px;
+  margin-bottom: 40px;
+}
+
+
 .items-cards {
   border: 1px solid rgba(0, 0, 0, 0);
   margin-bottom: 4rem;
@@ -18,10 +129,15 @@
   border-radius: 1rem;
 }
 
+.products-containers {
+  display: flex;
+}
 
-.back-btn {
-  margin-left: 79%;
-  margin-top: 33px;
+.products-images {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  margin-left: 2rem;
+  margin-top: 1rem;
 }
 
 .products-info {
@@ -30,15 +146,8 @@
   margin-top: 1rem;
 }
 
-.products-info #title {
+.products-infos #title {
   color: grey;
-}
-
-.bottom-container h1 {
-  font-size: 2rem;
-  letter-spacing: 0.2rem;
-  margin-left: 15px;
-  margin-bottom: 40px;
 }
 
 .products-info #disc {
@@ -52,10 +161,6 @@
   margin-left: -1rem;
 }
 
-.quantity img#decr {
-  margin-left: 0.5rem; 
-}
-
 .quantity {
   display: flex;
   flex-direction: row;
@@ -63,8 +168,27 @@
   margin-top: -3.4rem;
 }
 
+.quantity img#decr {
+  margin-left: 0.5rem; 
+}
+
 .quantity img#incr {
   margin-right: 0.5rem; 
+}
+
+hr {
+  width: 100%;
+  margin-left: -0px;
+  background-color: #0000004a;
+  height: 1px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  margin-left: 90%;
+  background-color: white;
+  width: 5rem;
 }
 
 .sub-total {
@@ -77,27 +201,11 @@
   background-color: white;
 }
 
-hr {
-  width: 100%;
-  margin-left: -0px;
-  background-color: #0000004a;
-  height: 1px;
-}
-
 .sub-total h1 {
   font-size: 1rem;
   margin-left: 1rem;
   margin-top: 1rem;
 }
-
-.btn {
-  display: flex;
-  flex-direction: row;
-  margin-left: 90%;
-  background-color: white;
-  width: 5rem;
-}
-
 
 .item {
   display: flex;
@@ -123,28 +231,15 @@ hr {
   border-radius: 0.5rem;
 }
 
-
+#red {
+  color: red; 
+}
+.back-btn {
+  margin-left: 79%;
+  margin-top: 30px;
+}
 .btn-4 {
   width: 8rem;
   height: 2.5rem;
   border-radius: 0.5rem;
-}
-
-
-#red {
-  color: red;
-}
-
-.bottom-container {
-  border: 2px solid rgba(0, 0, 0, 0); 
-  padding: 20px; 
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
-  border-radius: 0.7em;
-  width: 60%;
-  margin-right: 25%;
-  margin-top: 25px;
-  
 }
