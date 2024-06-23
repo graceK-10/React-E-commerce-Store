@@ -28,4 +28,15 @@
   flex: 1 1 auto;
   margin-left: 1rem;
   margin-top: 1rem;
-}s
+}
+
+.products-infos #title {
+  color: grey;
+}
+
+.bottom-container h1 {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin-left: 15px;
+  margin-bottom: 40px;
+}
