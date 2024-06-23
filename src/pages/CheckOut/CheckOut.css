@@ -17,7 +17,53 @@
 
 /*testing*/
 .product-images {
-    margin-top: 100px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 15px;
+    flex: 0 0 auto;
+}
+
+.products-info {
     margin-left: 1rem;
+    margin-top: 1rem;
+    flex: 1 1 auto;
+}
+
+.products-info #disc {
+    font-size: 1rem;
+    font-weight: bold;
+    word-spacing: -1px;
+    margin-top: 23px;
+}
+
+.products-info #title {
+    color: #333;
+}
+
+.products-info img {
+    margin-left: -1rem;
+}
+
+.quantity {
+    display: flex;
+    flex-direction: row;
+    margin-top: -5rem;
+    margin-left: 30rem;
+
+}
+
+.quantity #incr {
     margin-right: 1rem;
+}
+
+.quantity #decr {
+    margin-left: 1rem;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffff;
+    width: 4rem;
+    margin-left: 90%;
 }
