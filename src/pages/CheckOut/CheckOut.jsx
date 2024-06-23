@@ -1,9 +1,9 @@
 // Importing assets and CSS
-import cardIcon from '../../assets/Card-Icon.svg';
-import giftIcon from '../../assets/Gift-Icon.svg';
-import './CheckOut.css'
-import plus from '../../assets/Plus-Button.svg';
-import minus from '../../assets/Minus-Button.svg';
+import cardIcon from "../../assets/Card-Icon.svg";
+import giftIcon from "../../assets/Gift-Icon.svg";
+import "./CheckOut.css";
+import plus from "../../assets/Plus-Button.svg";
+import minus from "../../assets/Minus-Button.svg";
 
 // Importing React hooks and components
 import { useState } from "react";
@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 function CheckOut() {
   // State to store products with quantity
   const [productsState, setProductsState] = useState(
-    productDetails.map(product => ({ ...product, quantity: 1 }))
+    products.map(product => ({ ...product, quantity: 1 }))
   );
 
   // State to store subtotal, shipping, GST, and gift card values
@@ -26,9 +26,11 @@ function CheckOut() {
   // Function to update quantity of a product
   const updateQuantity = (productId, increment) => {
     // Update product quantity in state
-    setProductsState(prevProducts => {
+    setProductsState((prevProducts) => {
       const newProducts = [...prevProducts];
-      const productToUpdate = newProducts.find(product => product.id === productId);
+      const productToUpdate = newProducts.find(
+        (product) => product.id === productId
+      );
       if (productToUpdate) {
         productToUpdate.quantity += increment ? 1 : -1;
       }
@@ -36,20 +38,23 @@ function CheckOut() {
     });
 
     //to  calculate new subtotal, shipping, GST, and gift card values
-    const totalPrice = productsState.reduce((acc, product) => acc + product.price * product.quantity, 0);
+    const totalPrice = productsState.reduce(
+      (acc, product) => acc + product.price * product.quantity,
+      0
+    );
     setItems(totalPrice);
 
-    const totalShipping = 10; 
+    const totalShipping = 10;
     setShipping(totalShipping);
 
-    const totalGst = totalPrice * 0.05; 
+    const totalGst = totalPrice * 0.05;
     setGst(totalGst);
 
-    const totalGiftCard = 20; 
+    const totalGiftCard = 20;
     setGiftCard(totalGiftCard);
   };
 
-  // a functions to increment and decrement quanti
+  // a functions to increment and decrement quantity
   const incrementQuantity = productId => updateQuantity(productId, true);
   const decrementQuantity = productId => updateQuantity(productId, false);
 
@@ -65,7 +70,9 @@ function CheckOut() {
         <p>123 Plae Grond Street</p>
         <p>Vermont, California</p>
         <p>United States of America</p>
-        <div className="btn"><button>Change</button></div>
+        <div className="btn">
+          <button>Change</button>
+        </div>
       </div>
 
       {/* Payment method section */}
@@ -83,7 +90,7 @@ function CheckOut() {
             Billing adress same as Shipping adress
           </label>
         </div>
-        <div className="btn"><button>Change</button></div>
+        <div className="bttn"><button>Change</button></div>
       </div>
 
       {/* Review your bag section */}
