@@ -1,30 +1,31 @@
-//importing assets and css
-import React from 'react';
-import plus from '../../assets/Plus-Button.svg';
-import minus from '../../assets/Minus-Button.svg';
+// Importing assets and CSS
 import cardIcon from '../../assets/Card-Icon.svg';
 import giftIcon from '../../assets/Gift-Icon.svg';
 import './CheckOut.css'
+import plus from '../../assets/Plus-Button.svg';
+import minus from '../../assets/Minus-Button.svg';
 
-//importing React Hooks and components
-import { Link } from 'react-router-dom';
+// Importing React hooks and components
 import { useState } from "react";
+import products from "./ProductInfo";
+import { Link } from "react-router-dom";
 
-
-//Checkout component
+// Checkout component
 function CheckOut() {
-  const [productsState, setProductsState] = useState(  
+  // State to store products with quantity
+  const [productsState, setProductsState] = useState(
     products.map(product => ({ ...product, quantity: 1 }))
   );
 
   // State to store subtotal, shipping, GST, and gift card values
-  const [items,setItems] = useState(0);
+  const [items, setItems] = useState(0);
   const [shipping, setShipping] = useState(0);
   const [gst, setGst] = useState(0);
-  const [giftCard, setGiftCar] = useState(0);
+  const [giftCard, setGiftCard] = useState(0);
 
-  // Function to update quantity of a products
+  // Function to update quantity of a product
   const updateQuantity = (productId, increment) => {
+    // Update product quantity in state
     setProductsState(prevProducts => {
       const newProducts = [...prevProducts];
       const productToUpdate = newProducts.find(product => product.id === productId);
@@ -33,59 +34,131 @@ function CheckOut() {
       }
       return newProducts;
     });
+
+    //to  calculate new subtotal, shipping, GST, and gift card values
+    const totalPrice = productsState.reduce((acc, product) => acc + product.price * product.quantity, 0);
+    setItems(totalPrice);
+
+    const totalShipping = 10; 
+    setShipping(totalShipping);
+
+    const totalGst = totalPrice * 0.05; 
+    setGst(totalGst);
+
+    const totalGiftCard = 20; 
+    setGiftCard(totalGiftCard);
   };
 
-  // to alculate subtotal, shipping, GST, and gift card values
-  const totalPrice = productsState.reduce((acc, product) => acc + product.price * product.quantity, 0);
-  setItems(totalPrice);
+  // a functions to increment and decrement quantity
+  const incrementQuantity = productId => updateQuantity(productId, true);
+  const decrementQuantity = productId => updateQuantity(productId, false);
 
-  const totalShipping = 10;
-  setShipping(totalShipping);
-  const totalGst = totalPrice * 0.10;
-  setGst(totalGst);
-  const totalGiftCard = 20;
-  setGiftCard(totalGiftCard);
-};
-
-//funtion to increament and to decreament quantity
-  const incrementQuantity = productId => updateQuantity(productId,true);
-  const decreamentQuantity = productId => updateQuantity(productId,false)
-
+  // Calculating the total order value
   const total = items + shipping + gst - giftCard;
 
   return (
-    <div className="container">
-      {/*shipping adress section*/}
-      <div className="first-container">
-        <h1>SHIPPING ADRESS</h1>
+    <div className="containers">
+      {/* Shipping address section */}
+      <div className="top-container">
+        <h1>SHIPPING ADDRESS</h1>
         <p>John Maker</p>
         <p>123 Plae Grond Street</p>
         <p>Vermont, California</p>
         <p>United States of America</p>
-        <div className="btn">Change</div>
+        <div className="btn"><button>Change</button></div>
       </div>
 
       {/* Payment method section */}
-      <div className="second-container">
+      <div className="middle-container">
         <h1>PAYMENT METHOD</h1>
         <p>
-          <img src={cardIcon} alt="card-icon" /></img>MasterCard ending in 1252
+          <img src={cardIcon} alt="card"></img>MasterCard ending in 1252
         </p>
         <p>
-          <img src={giftIcon}alt="gift-icon" /></img>$53.21 Gift card balance
+          <img src={giftIcon} alt="card"></img>$53.21 Gift card balance
         </p>
         <div className="checkbox">
-          <input type="checkbox" id="giftCheckbox" name="giftCheckbox" />
-          <label for="giftCheckbox">Billing adess same as Shipping adress</label>
+          <input type="checkbox" id="myCheckbox" name="myCheckbox" />
+          <label htmlFor="myCheckbox">
+            Billing adress same as Shipping adress
+          </label>
         </div>
-        <div className="btn">{/* <button>Change</button> */}</div>
+        <div className="bttn"><button>Change</button></div>
       </div>
 
+      {/* Review your bag section */}
+      <div className="bottom-container">
+        <h1>REVIEW YOUR BAG</h1>
+        <div className="cart-items">
+          {productsState.map((product) => (
+            <div className="items-cards" key={product.id}>
+              <div className="products-containers">
+                <div className="products-images">
+                  <img src={product.imageUrl} alt={product.title} />
+                </div>
+                <div className="products-infos">
+                  <h3>{product.title}</h3>
+                  <p id="title">{product.description}</p>
+                  <p id="disc">{product.shortDescription}</p>
+                  <img src={product.rating} alt={product.title} />
+                  <p>
+                    {product.currency}
+                    {product.price}
+                  </p>
+
+                  <div className="quantity">
+                    <div onClick={() => incrementQuantity(product.id)}>
+                      <img id="incr" src={plus} alt="plus" />
+                    </div>
+                    <p>{product.quantity}</p>
+                    <div onClick={() => decrementQuantity(product.id)}>
+                      <img id="decr" src={minus} alt="minus" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr></hr>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Order summary section */}
+      <div className="sub-total">
+        <h1>Order Summary</h1>
+        <div className="iitem">
+          <p>Items:</p>
+          <p>${items}</p>
+        </div>
+        <div className="iitem">
+          <p>Shipping:</p>
+          <p>${shipping}</p>
+        </div>
+        <div className="iitem">
+          <p>Estimated GST:</p>
+          <p>${gst}</p>
+        </div>
+        <div className="iitem">
+          <p>Gift card:</p>
+          <p>${giftCard}</p>
+        </div>
+        <hr></hr>
+        <div className="iitem">
+          <p id="red">Order total:</p>
+          <p id="red">${total}</p>
+        </div>
+        <hr></hr>
+        <Link to="/AddAdress">
+          <button className="btn3">Place your order</button>
+        </Link>
+      </div>
+
+      {/* Back button */}
+      <div className="back-btn">
+        <button className="btn4">Back</button>
+      </div>
     </div>
-  )
+  );
 }
-
-
-  
 
 export default CheckOut;
