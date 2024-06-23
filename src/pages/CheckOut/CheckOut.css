@@ -179,3 +179,31 @@ hr {
     margin-right: 25%;
     margin-top: 25px;
   }
+
+
+  .bottom-container h1 {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    margin-left: 15px;
+    margin-bottom: 40px;
+  }
+  
+  
+  .items-cards {
+    border: 1px solid rgba(0, 0, 0, 0);
+    margin-bottom: 4rem;
+    background-color: white;
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  sub-total {
+    border: 1px solid rgba(0, 0, 0, 0);
+    width: 16rem;
+    height: 22rem;
+    margin-left: 70%;
+    margin-top: -248rem;
+    border-radius: 0.5rem;
+    background-color: white;
+  }
+  
