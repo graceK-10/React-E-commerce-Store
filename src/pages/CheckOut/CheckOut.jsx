@@ -1,20 +1,20 @@
 // Importing assets and CSS
-import cardIcon from "../../assets/Card-Icon.svg";
-import giftIcon from "../../assets/Gift-Icon.svg";
+import cardIcon from "../../Assets/Card-Icon.svg";
+import giftIcon from "../../Assets/Gift-Icon.svg";
 import "./CheckOut.css";
-import plus from "../../assets/Plus-Button.svg";
-import minus from "../../assets/Minus-Button.svg";
+import plus from "../../Assets/Plus-Button.svg";
+import minus from "../../Assets/Minus-Button.svg";
 
 // Importing React hooks and components
 import { useState } from "react";
-import productDetails from '../ProductDetails'
+import data from "../../components/Data";
 import { Link } from "react-router-dom";
 
 // Checkout component
 function CheckOut() {
   // State to store products with quantity
   const [productsState, setProductsState] = useState(
-    products.map(product => ({ ...product, quantity: 1 }))
+    data.map((product) => ({ ...product, quantity: 1 }))
   );
 
   // State to store subtotal, shipping, GST, and gift card values
