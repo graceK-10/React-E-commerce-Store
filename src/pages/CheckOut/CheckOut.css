@@ -51,3 +51,14 @@
 .products-info img {
   margin-left: -1rem;
 }
+
+.quantity img#decr {
+  margin-left: 0.5rem; 
+}
+
+.quantity {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rem;
+  margin-top: -3.4rem;
+}
