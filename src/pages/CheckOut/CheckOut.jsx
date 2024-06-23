@@ -7,14 +7,14 @@ import minus from '../../assets/Minus-Button.svg';
 
 // Importing React hooks and components
 import { useState } from "react";
-import products from "./ProductInfo";
+import productDetails from '../ProductDetails'
 import { Link } from "react-router-dom";
 
 // Checkout component
 function CheckOut() {
   // State to store products with quantity
   const [productsState, setProductsState] = useState(
-    products.map(product => ({ ...product, quantity: 1 }))
+    productDetails.map(product => ({ ...product, quantity: 1 }))
   );
 
   // State to store subtotal, shipping, GST, and gift card values
@@ -57,7 +57,7 @@ function CheckOut() {
   const total = items + shipping + gst - giftCard;
 
   return (
-    <div className="containers">
+    <div className="container">
       {/* Shipping address section */}
       <div className="top-container">
         <h1>SHIPPING ADDRESS</h1>
@@ -83,7 +83,7 @@ function CheckOut() {
             Billing adress same as Shipping adress
           </label>
         </div>
-        <div className="bttn"><button>Change</button></div>
+        <div className="btn"><button>Change</button></div>
       </div>
 
       {/* Review your bag section */}
@@ -92,11 +92,11 @@ function CheckOut() {
         <div className="cart-items">
           {productsState.map((product) => (
             <div className="items-cards" key={product.id}>
-              <div className="products-containers">
-                <div className="products-images">
+              <div className="products-container">
+                <div className="product-images">
                   <img src={product.imageUrl} alt={product.title} />
                 </div>
-                <div className="products-infos">
+                <div className="products-info">
                   <h3>{product.title}</h3>
                   <p id="title">{product.description}</p>
                   <p id="disc">{product.shortDescription}</p>
@@ -126,36 +126,36 @@ function CheckOut() {
       {/* Order summary section */}
       <div className="sub-total">
         <h1>Order Summary</h1>
-        <div className="iitem">
+        <div className="item">
           <p>Items:</p>
           <p>${items}</p>
         </div>
-        <div className="iitem">
+        <div className="item">
           <p>Shipping:</p>
           <p>${shipping}</p>
         </div>
-        <div className="iitem">
+        <div className="item">
           <p>Estimated GST:</p>
           <p>${gst}</p>
         </div>
-        <div className="iitem">
+        <div className="item">
           <p>Gift card:</p>
           <p>${giftCard}</p>
         </div>
         <hr></hr>
-        <div className="iitem">
+        <div className="item">
           <p id="red">Order total:</p>
           <p id="red">${total}</p>
         </div>
         <hr></hr>
         <Link to="/AddAdress">
-          <button className="btn3">Place your order</button>
+          <button className="btn-3">Place your order</button>
         </Link>
       </div>
 
       {/* Back button */}
       <div className="back-btn">
-        <button className="btn4">Back</button>
+        <button className="btn-4">Back</button>
       </div>
     </div>
   );
