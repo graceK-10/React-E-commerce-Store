@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ProductDetails from "./pages/ProductDetails";
+import Bag from "./components/Bag";
 import CheckOut from "./pages/CheckOut/CheckOut";
 
 function App() {

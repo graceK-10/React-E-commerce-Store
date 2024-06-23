@@ -131,7 +131,7 @@ const HomePage = () => {
         </div>
       </div>
       {/* Grey line to the right of content area */}
-      <div className="absolute top-16 right-[20rem] w-[5px] h-[115%] bg-gray-400"></div>{" "}
+      {/* <div className="absolute top-16 right-[20rem] w-[5px] h-[115%] bg-gray-400"></div>{" "} */}
       <Bagsidebar selectedItem={clickedItem} />
     </>
   );
