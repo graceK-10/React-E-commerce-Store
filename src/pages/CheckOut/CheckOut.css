@@ -88,5 +88,13 @@ hr {
 
 }
 
+.top-container p {
+    color: grey;
+    display: flex;
+    align-items: center;
+    margin: 11px 0;
+    margin-left: 15px;
+
+}
 
 
