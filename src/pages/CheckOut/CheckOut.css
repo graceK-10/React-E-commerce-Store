@@ -135,3 +135,27 @@ hr {
     align-items: center;
     margin: 10px 0;
 }
+
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+
+  .checkbox input[type="checkbox"]:checked {
+    background-color: rgb(5, 59, 9);
+  }
+
+  .checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid black;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+  }
+  
