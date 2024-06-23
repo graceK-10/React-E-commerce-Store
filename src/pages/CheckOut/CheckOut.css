@@ -97,4 +97,10 @@ hr {
 
 }
 
+.top-container h1 {
+    font-size: 2rem;
+    margin-left: 15px;
+    letter-spacing: 5px;
+    color: #525252;
+}
 
