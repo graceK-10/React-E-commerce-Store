@@ -1,4 +1,4 @@
-import react, { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import menu from "../assets/Menu.svg";
 import closeMenu from "../assets/CloseMenu.svg";
@@ -8,6 +8,7 @@ import bag from "../assets/Bag.svg";
 import closeBag from "../assets/CloseBag.svg";
 import navlink from "../assets/NavLink.svg";
 import closeNavLink from "../assets/CloseNavLink.svg";
+import logo from "../assets/Logo.svg";
 
 const MenuSidebar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,33 +23,47 @@ const MenuSidebar = () => {
         isMenuOpen ? "w-[8rem]" : "w-[5.5rem]"
       }`}
     >
-      <div className="logo flex justify-center items-center p-2 rounded-md">
-        <img src={isMenuOpen ? closeMenu : menu} alt="Logo" />
-      </div>
-      <div className="menu">
-        <div className="flex items-center p-2 gap-2" onClick={handleMenuClick}>
-          <img src={isMenuOpen ? closeMenu : menu} alt="Menu Icon" />
+      {/* Top navigation links */}
+      <div
+        className={`nav-links-top ${
+          isMenuOpen ? "open" : ""
+        } flex flex-col justify-center items-center p-2 gap-8 transition-width duration-300`}
+      >
+        {/* Logo Icon */}
+        <div className="logo flex justify-center items-center p-2 rounded-md">
+          <img src={logo} alt="Logo" />
+        </div>
+
+        {/* Hamburger Menu Icon */}
+        <div className="menu">
+          <div
+            className="flex items-center p-2 gap-2"
+            onClick={handleMenuClick}
+          >
+            <img src={isMenuOpen ? closeMenu : menu} alt="Menu Icon" />
+          </div>
+        </div>
+
+        {/* Home Icon */}
+        <div className="home">
+          <Link to="/">
+            <img
+              src={isMenuOpen ? closeHome : home}
+              alt="Home Icon"
+              className="flex justify-center items-center p-2 gap-2 w-18 h-19 bg-black rounded-xl"
+            />
+          </Link>
+        </div>
+        <div className="Bag">
+          <Link to="/bag">
+            <img
+              src={isMenuOpen ? closeBag : bag}
+              alt="Bag Icon"
+              className="flex justify-center items-center p-2 gap-2 rounded-lg bg-white"
+            />
+          </Link>
         </div>
       </div>
-      <div className="home">
-        <Link to="/">
-          <img
-            src={isMenuOpen ? closeHome : home}
-            alt="Home Icon"
-            className="flex justify-center items-center p-2 gap-2 w-18 h-19 bg-black rounded-xl"
-          />
-        </Link>
-      </div>
-      <div className="Bag">
-        <Link to="/bag">
-          <img
-            src={isMenuOpen ? closeBag : bag}
-            alt="Bag Icon"
-            className="flex justify-center items-center p-2 gap-2 rounded-lg bg-white"
-          />
-        </Link>
-      </div>
-
       {/* Bottom navigation link */}
       <div className="nav-link-bottom flex items-center justify-center p-2 gap-8">
         <Link to="/">

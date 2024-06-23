@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities; 
+
+body {
+    background-color: #e7e7e7;
+  }
+  
+  .product-img {
+    /* do not uncomment width, unless you want to cry  */
+    /* width: 242px; */
+    height: 100%;
+  }
