@@ -104,3 +104,12 @@ hr {
     color: #525252;
 }
 
+
+.middle-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+    padding: 3px;
+    margin-left: 16px;
+    background-color: red;
+}
