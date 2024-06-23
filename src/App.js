@@ -1,17 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ShippingAddressForm from './ShippingAddressForm';
-import AddPayment from './AddPayment';
+import ShippingAddressForm from './components/ShippingAddressForm';
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/add-payment" element={<AddPayment />} />
-        <Route path="/" element={<ShippingAddressForm />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <ShippingAddressForm />
+    </div>
   );
-};
+}
+
 
 export default App;
