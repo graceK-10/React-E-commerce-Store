@@ -93,11 +93,11 @@ function CheckOut() {
         <div className="cart-items">
           {productsState.map((product) => (
             <div className="items-cards" key={product.id}>
-              <div className="products-containers">
+              <div className="products-container">
                 <div className="products-images">
                   <img src={product.imageUrl} alt={product.title} />
                 </div>
-                <div className="products-infos">
+                <div className="products-info">
                   <h3>{product.title}</h3>
                   <p id="title">{product.description}</p>
                   <p id="disc">{product.shortDescription}</p>
@@ -126,36 +126,36 @@ function CheckOut() {
       {/* Order summary section */}
       <div className="sub-total">
         <h1>Order Summary</h1>
-        <div className="iitem">
+        <div className="item">
           <p>Items:</p>
           <p>${items}</p>
         </div>
-        <div className="iitem">
+        <div className="item">
           <p>Shipping:</p>
           <p>${shipping}</p>
         </div>
-        <div className="iitem">
+        <div className="item">
           <p>Estimated GST:</p>
           <p>${gst}</p>
         </div>
-        <div className="iitem">
+        <div className="item">
           <p>Gift card:</p>
           <p>${giftCard}</p>
         </div>
         <hr></hr>
-        <div className="iitem">
+        <div className="item">
           <p id="red">Order total:</p>
           <p id="red">${total}</p>
         </div>
         <hr></hr>
         <Link to="/AddAdress">
-          <button className="btn3">Place your order</button>
+          <button className="btn-3">Place your order</button>
         </Link>
       </div>
 
       {/* Back button */}
       <div className="back-btn">
-        <button className="btn4">Back</button>
+        <button className="btn-4">Back</button>
       </div>
     </div>
   );
