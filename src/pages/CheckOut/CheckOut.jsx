@@ -49,7 +49,7 @@ function CheckOut() {
     setGiftCard(totalGiftCard);
   };
 
-  // a functions to increment and decrement quantity
+  // a functions to increment and decrement quanti
   const incrementQuantity = productId => updateQuantity(productId, true);
   const decrementQuantity = productId => updateQuantity(productId, false);
 
