@@ -1,4 +1,4 @@
-import watchImage from "../Assets/Watch.jpg";
+import watchImage from "../Assets/AppleWatch.jpg";
 import Sonyz23 from "../Assets/Headphones.jpg";
 import iphoneblack from "../Assets/Iphone11black.jpg";
 import iphoneblue from "../Assets/Name=Iphone-12-02.jpg";
