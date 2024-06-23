@@ -5,6 +5,7 @@ import "./CheckOut.css";
 import plus from "../../Assets/Plus-Button.svg";
 import minus from "../../Assets/Minus-Button.svg";
 
+
 // Importing React hooks and components
 import { useState } from "react";
 import data from "../../components/Data";
@@ -14,7 +15,7 @@ import { Link } from "react-router-dom";
 function CheckOut() {
   // State to store products with quantity
   const [productsState, setProductsState] = useState(
-    data.map((product) => ({ ...product, quantity: 1 }))
+    data.map(product => ({ ...product, quantity: 1 }))
   );
 
   // State to store subtotal, shipping, GST, and gift card values
@@ -26,39 +27,34 @@ function CheckOut() {
   // Function to update quantity of a product
   const updateQuantity = (productId, increment) => {
     // Update product quantity in state
-    setProductsState((prevProducts) => {
+    setProductsState(prevProducts => {
       const newProducts = [...prevProducts];
-      const productToUpdate = newProducts.find(
-        (product) => product.id === productId
-      );
+      const productToUpdate = newProducts.find(product => product.id === productId);
       if (productToUpdate) {
         productToUpdate.quantity += increment ? 1 : -1;
       }
       return newProducts;
     });
 
-    //to  calculate new subtotal, shipping, GST, and gift card values
-    const totalPrice = productsState.reduce(
-      (acc, product) => acc + product.price * product.quantity,
-      0
-    );
+    //to calculate new subtotal, shipping, GST, and gift card values
+    const totalPrice = productsState.reduce((acc, product) => acc + product.price * product.quantity, 0);
     setItems(totalPrice);
 
-    const totalShipping = 10;
+    const totalShipping = 10; 
     setShipping(totalShipping);
 
-    const totalGst = totalPrice * 0.05;
+    const totalGst = totalPrice * 0.05; 
     setGst(totalGst);
 
     const totalGiftCard = 20;
     setGiftCard(totalGiftCard);
   };
 
-  // a functions to increment and decrement quantity
+  // functions to increment and decrement quantity
   const incrementQuantity = productId => updateQuantity(productId, true);
   const decrementQuantity = productId => updateQuantity(productId, false);
 
-  // Calculating the total order value
+  // Calculate total order value
   const total = items + shipping + gst - giftCard;
 
   return (
@@ -70,9 +66,7 @@ function CheckOut() {
         <p>123 Plae Grond Street</p>
         <p>Vermont, California</p>
         <p>United States of America</p>
-        <div className="btn">
-          <button>Change</button>
-        </div>
+        <div className="btn"><button>Change</button></div>
       </div>
 
       {/* Payment method section */}
@@ -99,11 +93,11 @@ function CheckOut() {
         <div className="cart-items">
           {productsState.map((product) => (
             <div className="items-cards" key={product.id}>
-              <div className="products-container">
-                <div className="product-images">
+              <div className="products-containers">
+                <div className="products-images">
                   <img src={product.imageUrl} alt={product.title} />
                 </div>
-                <div className="products-info">
+                <div className="products-infos">
                   <h3>{product.title}</h3>
                   <p id="title">{product.description}</p>
                   <p id="disc">{product.shortDescription}</p>
@@ -112,7 +106,6 @@ function CheckOut() {
                     {product.currency}
                     {product.price}
                   </p>
-
                   <div className="quantity">
                     <div onClick={() => incrementQuantity(product.id)}>
                       <img id="incr" src={plus} alt="plus" />
@@ -133,36 +126,36 @@ function CheckOut() {
       {/* Order summary section */}
       <div className="sub-total">
         <h1>Order Summary</h1>
-        <div className="item">
+        <div className="iitem">
           <p>Items:</p>
           <p>${items}</p>
         </div>
-        <div className="item">
+        <div className="iitem">
           <p>Shipping:</p>
           <p>${shipping}</p>
         </div>
-        <div className="item">
+        <div className="iitem">
           <p>Estimated GST:</p>
           <p>${gst}</p>
         </div>
-        <div className="item">
+        <div className="iitem">
           <p>Gift card:</p>
           <p>${giftCard}</p>
         </div>
         <hr></hr>
-        <div className="item">
+        <div className="iitem">
           <p id="red">Order total:</p>
           <p id="red">${total}</p>
         </div>
         <hr></hr>
         <Link to="/AddAdress">
-          <button className="btn-3">Place your order</button>
+          <button className="btn3">Place your order</button>
         </Link>
       </div>
 
       {/* Back button */}
       <div className="back-btn">
-        <button className="btn-4">Back</button>
+        <button className="btn4">Back</button>
       </div>
     </div>
   );
