@@ -107,19 +107,15 @@ hr {
 
 .middle-container {
     display: flex;
-    align-items: flex-start;
-    margin: 10px 0px;
-    padding: 3px;
-    margin-left: 16px;
-    background-color: #ffff;
-    display: flex;
     flex-direction: column;
-    border-radius: 0.5rem;
+    align-items: flex-start;
+    padding: 20px;
     width: 62%;
     margin-right: 25%;
     margin-top: 25px;
+    background-color: #ffff;
+    border-radius: 0.5rem;
     border: none;
-    padding: 20px;
 }
 
 .middle-container h1 {
@@ -130,4 +126,12 @@ hr {
 
 .middle-container img {
     margin-right: 10px;
+}
+
+.middle-container p {
+    color: gray;
+    display: flex;
+    margin-left: 15px;
+    align-items: center;
+    margin: 10px 0;
 }
