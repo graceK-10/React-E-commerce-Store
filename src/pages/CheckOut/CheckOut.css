@@ -63,7 +63,7 @@
   margin-top: -3.4rem;
 }
 
-quantity img#incr {
+.quantity img#incr {
   margin-right: 0.5rem; 
 }
 
@@ -99,3 +99,52 @@ hr {
 }
 
 
+.item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -5px;
+  margin-right: 10px;
+  margin-left: 12px;
+  justify-content: space-between;
+}
+
+.item p {
+  color: grey;
+}
+
+.btn-3 {
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-left: 2rem;
+  height: 2.2rem;
+  width: 12rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+
+.btn-4 {
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+}
+
+
+#red {
+  color: red;
+}
+
+.bottom-container {
+  border: 2px solid rgba(0, 0, 0, 0); 
+  padding: 20px; 
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  border-radius: 0.7em;
+  width: 60%;
+  margin-right: 25%;
+  margin-top: 25px;
+  
+}
