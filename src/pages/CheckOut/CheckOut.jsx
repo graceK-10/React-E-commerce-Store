@@ -84,7 +84,7 @@ function CheckOut() {
             Billing adress same as Shipping adress
           </label>
         </div>
-        <div className="bttn"><button>Change</button></div>
+        <div className="btn"><button>Change</button></div>
       </div>
 
       {/* Review your bag section */}
