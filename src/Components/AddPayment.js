@@ -34,15 +34,15 @@ function AddPayment() { //renders a simple interface for selecting and adding a 
              {/* divided form into groups using div elements with classes form-group and card. */}
              <div className="Date">
              <label>CVC</label>
-             <input type="numeric" id="Date" placeholder="123" />
+             <input type="number" id="Date" placeholder="123" />
             </div>
         </div>
         <div className="checkbox">
         <input type="checkbox" id="myCheckbox" name="myCheckbox" />
         <label htmlFor="myCheckbox">Save this as your default payment method</label>
         </div>
-        <div className="bUtton6">
-        <button className="button6">Add Payment Method</button>
+        <div className="button6">
+        <button className="button7">Add Payment Method</button>
         </div>
         <div className="la-line">
           <p id="ba">back</p>
