@@ -192,16 +192,25 @@
   
   .sub-total {
     border: 1px solid rgba(0, 0, 0, 0);
-    width: 16rem;
+    width: 20rem;
     height: 22rem;
     margin-left: 70%;
-    margin-top: -248rem;
     border-radius: 0.5rem;
     background-color: white;
+    padding: 20px;
+    
+  }
+
+  .sub-total {
+    position: fixed;
+    top: 28%;
+    right: 20%;
+    transform: translateY(-50%);
+    z-index: 1;
   }
   
   .sub-total h1 {
-    font-size: 1rem;
+    font-size: 2rem;
     margin-left: 1rem;
     margin-top: 1rem;
   }
