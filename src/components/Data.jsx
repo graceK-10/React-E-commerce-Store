@@ -1,10 +1,10 @@
-import watchImage from "../assets/Watch.jpg";
-import Sonyz23 from "../assets/Headphones.jpg";
-import iphoneblack from "../assets/Iphone11black.jpg";
-import iphoneblue from "../assets/Name=Iphone-12-02.jpg";
-import iphonewhite from "../assets/Name=Iphone-12-04.jpg";
-import iphonered from "../assets/Name=Iphone-12-03.jpg";
-import stars from "../assets/Special.png";
+import watchImage from "../Assets/AppleWatch.jpg";
+import Sonyz23 from "../Assets/Headphones.jpg";
+import iphoneblack from "../Assets/Iphone11black.jpg";
+import iphoneblue from "../Assets/Name=Iphone-12-02.jpg";
+import iphonewhite from "../Assets/Name=Iphone-12-04.jpg";
+import iphonered from "../Assets/Name=Iphone-12-03.jpg";
+import stars from "../Assets/Special.png";
 
 // Defining data as an array of objects where each object represents a product
 const data = [

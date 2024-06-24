@@ -1,4 +1,4 @@
-.back-link {
+/* .back-link {
     font-size: large;
     display: block;
     text-decoration: none;
@@ -7,16 +7,15 @@
     position: absolute;
     left: 11rem;
     top: 50px;
-  }
+  } */
   
   
-  .product-list {
+  /* .product-list {
     margin-left: 10rem;
     margin-right: 25rem;
-    /* background-color: red; */
     position: relative;
     font-family: sans-serif;
-  }
+  } */
   
   .product {
     display: flex;
@@ -29,12 +28,12 @@
     /* margin-left: 25px; Add some space between product-details and Container */
   /* } */
   
-  .Container {
+  /* .Container {
     display: flex;
-    justify-content: space-between; /* Ensure product-details is to the right */
+    justify-content: space-between;
     width: 100%;
     height: auto;
-  }
+  } */
   
   .bigImage {
     margin-left: 2rem;
