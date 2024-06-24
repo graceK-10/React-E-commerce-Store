@@ -19,7 +19,10 @@ const ProductDetails = () => {
   return (
     <>
       <MenuSidebar />
-      <Link to="/" className="back-link">
+      <Link
+        to="/"
+        className="back-link text-lg block no-underline text-[#1a1f16] font-bold absolute left-[11rem] top-[50px]"
+      >
         &lt;&nbsp;&nbsp;Back
       </Link>
       <div className="product-list">
