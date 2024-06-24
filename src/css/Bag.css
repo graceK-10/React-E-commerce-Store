@@ -7,8 +7,9 @@
   position: fixed;
   width: 345px;
   height: 99%;
-  right: 0;
+  right: 20px;
   top: 0;
+  z-index: 1000;
   /* background-color: pink; */
 }
 
