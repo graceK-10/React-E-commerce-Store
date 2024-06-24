@@ -37,32 +37,44 @@ function CheckOut() {
       return newProducts;
     });
 
-    //to  calculate new subtotal, shipping, GST, and gift card values
+    //to calculate new subtotal, shipping, GST, and gift card values
     const totalPrice = productsState.reduce(
       (acc, product) => acc + product.price * product.quantity,
       0
     );
-    setItems(totalPrice);
+    setItems(totalPrice.toFixed(2));
 
     const totalShipping = 10;
-    setShipping(totalShipping);
+    setShipping(totalShipping.toFixed(2));
 
     const totalGst = totalPrice * 0.05;
-    setGst(totalGst);
+    setGst(totalGst.toFixed(2));
 
     const totalGiftCard = 20;
-    setGiftCard(totalGiftCard);
+    setGiftCard(totalGiftCard.toFixed(2));
+
+    const total = isNaN(
+      parseFloat(items) +
+        parseFloat(shipping) +
+        parseFloat(gst) -
+        parseFloat(giftCard)
+    )
+      ? 0
+      : parseFloat(items) +
+        parseFloat(shipping) +
+        parseFloat(gst) -
+        parseFloat(giftCard);
   };
 
-  // a functions to increment and decrement quantity
+  // functions to increment and decrement quantity
   const incrementQuantity = (productId) => updateQuantity(productId, true);
   const decrementQuantity = (productId) => updateQuantity(productId, false);
 
-  // Calculating the total order value
+  // Calculate total order value
   const total = items + shipping + gst - giftCard;
 
   return (
-    <div className="containers">
+    <div className="container">
       {/* Shipping address section */}
       <div className="top-container">
         <h1>SHIPPING ADDRESS</h1>
@@ -90,7 +102,7 @@ function CheckOut() {
             Billing adress same as Shipping adress
           </label>
         </div>
-        <div className="bttn">
+        <div className="btn">
           <button>Change</button>
         </div>
       </div>
@@ -101,11 +113,11 @@ function CheckOut() {
         <div className="cart-items">
           {productsState.map((product) => (
             <div className="items-cards" key={product.id}>
-              <div className="products-containers">
+              <div className="products-container">
                 <div className="products-images">
                   <img src={product.imageUrl} alt={product.title} />
                 </div>
-                <div className="products-infos">
+                <div className="products-info">
                   <h3>{product.title}</h3>
                   <p id="title">{product.description}</p>
                   <p id="disc">{product.shortDescription}</p>
@@ -114,7 +126,6 @@ function CheckOut() {
                     {product.currency}
                     {product.price}
                   </p>
-
                   <div className="quantity">
                     <div onClick={() => incrementQuantity(product.id)}>
                       <img id="incr" src={plus} alt="plus" />
@@ -135,24 +146,24 @@ function CheckOut() {
       {/* Order summary section */}
       <div className="sub-total">
         <h1>Order Summary</h1>
-        <div className="iitem">
+        <div className="item">
           <p>Items:</p>
           <p>${items}</p>
         </div>
-        <div className="iitem">
+        <div className="item">
           <p>Shipping:</p>
           <p>${shipping}</p>
         </div>
-        <div className="iitem">
+        <div className="item">
           <p>Estimated GST:</p>
           <p>${gst}</p>
         </div>
-        <div className="iitem">
+        <div className="item">
           <p>Gift card:</p>
           <p>${giftCard}</p>
         </div>
         <hr></hr>
-        <div className="iitem">
+        <div className="item">
           <p id="red">Order total:</p>
           <p id="red">${total}</p>
         </div>
@@ -164,7 +175,7 @@ function CheckOut() {
 
       {/* Back button */}
       <div className="back-btn">
-        <button className="btn4">Back</button>
+        <button className="btn-4">Back</button>
       </div>
     </div>
   );
