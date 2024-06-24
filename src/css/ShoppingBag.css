@@ -68,3 +68,59 @@
   margin-right: 0.5rem; /* Adjusted margin to move the minus button to the left */
   }
   
+  /* Media Queries for Responsive Design */
+
+@media (max-width: 1200px) {
+  .shopping {
+    margin-left: 5rem;
+    margin-right: 16rem;
+  }
+
+  .quantity {
+    margin-left: 25rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .shopping {
+    margin-left: 4rem;
+    margin-right: 14rem;
+  }
+
+  .quantity {
+    margin-left: 20rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .shopping {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .quantity {
+    margin-left: 15rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .shopping {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .quantity {
+    margin-left: 10rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .shopping {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .quantity {
+    margin-left: 5rem;
+  }
+}
