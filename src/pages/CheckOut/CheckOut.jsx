@@ -38,16 +38,22 @@ function CheckOut() {
 
     //to calculate new subtotal, shipping, GST, and gift card values
     const totalPrice = productsState.reduce((acc, product) => acc + product.price * product.quantity, 0);
-    setItems(totalPrice);
+    setItems(totalPrice.toFixed(2));
 
     const totalShipping = 10; 
-    setShipping(totalShipping);
+    setShipping(totalShipping.toFixed(2));
 
     const totalGst = totalPrice * 0.05; 
-    setGst(totalGst);
+    setGst(totalGst.toFixed(2));
 
     const totalGiftCard = 20;
-    setGiftCard(totalGiftCard);
+    setGiftCard(totalGiftCard.toFixed(2));
+
+    const total = parseFloat(items) + parseFloat(shipping) + parseFloat(gst) - parseFloat(giftCard);
+    setItems(totalPrice.toFixed(2));
+setShipping(totalShipping.toFixed(2));
+setGst(totalGst.toFixed(2));
+setGiftCard(totalGiftCard.toFixed(2));
   };
 
   // functions to increment and decrement quantity
