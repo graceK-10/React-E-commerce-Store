@@ -148,8 +148,8 @@ function CheckOut() {
           <p id="red">${total}</p>
         </div>
         <hr></hr>
-        <Link to="/AddAdress">
-          <button className="btn-3">Place your order</button>
+        <Link to="/AddPayment">
+          <button className="btn3">Place your order</button>
         </Link>
       </div>
 
