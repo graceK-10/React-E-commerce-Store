@@ -49,11 +49,8 @@ function CheckOut() {
     const totalGiftCard = 20;
     setGiftCard(totalGiftCard.toFixed(2));
 
-    const total = parseFloat(items) + parseFloat(shipping) + parseFloat(gst) - parseFloat(giftCard);
-    setItems(totalPrice.toFixed(2));
-setShipping(totalShipping.toFixed(2));
-setGst(totalGst.toFixed(2));
-setGiftCard(totalGiftCard.toFixed(2));
+   
+    const total = isNaN(parseFloat(items) + parseFloat(shipping) + parseFloat(gst) - parseFloat(giftCard)) ? 0 : parseFloat(items) + parseFloat(shipping) + parseFloat(gst) - parseFloat(giftCard);
   };
 
   // functions to increment and decrement quantity
