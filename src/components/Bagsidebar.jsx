@@ -110,15 +110,14 @@ const SideBar2 = ({ selectedItem }) => {
       {location.pathname === "/bag" ? (
         <Link to="/checkout" className="button">
           <div>
-            <img src={cart} alt="Logo" />
+            
             <span>Checkout</span>
           </div>
         </Link>
       ) : (
         <Link to="/bag" className="button">
           <div>
-            <img src={cart} alt="Logo" />
-            <span>View Bag</span>
+          <span>ViewBag</span>
           </div>
         </Link>
       )}
