@@ -3,8 +3,8 @@ import HomePage from "./pages/HomePage";
 import ProductDetails from "./pages/ProductDetails";
 import Bag from "./components/Bag";
 import CheckOut from "./pages/CheckOut/CheckOut";
-import ShippingAddressForm from "./components/ShippingAddressForm";
-import AddPayment from "./components/AddPayment";
+import ShippingAddressForm from "./pages/ShippingAddressForm";
+import AddPayment from "./pages/AddPayment";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         <Route path="/Checkout" element={<CheckOut />} />
         <Route path="/AddPayment" element={<AddPayment />} />
         <Route path="/ShippingAddressForm" element={<ShippingAddressForm />} />
+        <Route path="/AddPayment" element={<AddPayment />} />
       </Routes>
     </Router>
   );

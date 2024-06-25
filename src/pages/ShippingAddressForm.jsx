@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import './ShippingAddressForm.css';
+import React, { useState } from "react";
+import "../css/ShippingAddressForm.css";
 
 const ShippingAddressForm = () => {
   const [formData, setFormData] = useState({
-    fullName: '',
-    phoneNumber: '',
-    country: '',
-    state: '',
-    city: '',
-    suburb: '',
-    zipCode: '',
+    fullName: "",
+    phoneNumber: "",
+    country: "",
+    state: "",
+    city: "",
+    suburb: "",
+    zipCode: "",
     saveAddress: false,
   });
 
@@ -17,13 +17,13 @@ const ShippingAddressForm = () => {
     const { name, value, type, checked } = e.target;
     setFormData({
       ...formData,
-      [name]: type === 'checkbox' ? checked : value,
+      [name]: type === "checkbox" ? checked : value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Address Submitted:', formData);
+    console.log("Address Submitted:", formData);
   };
 
   return (
@@ -131,7 +131,9 @@ const ShippingAddressForm = () => {
         <label htmlFor="saveAddress">Save this as your default address</label>
       </div>
 
-      <button type="submit" className="submit-btn">Add Address</button>
+      <button type="submit" className="submit-btn">
+        Add Address
+      </button>
     </form>
   );
 };
