@@ -4,7 +4,7 @@ import ProductDetails from "./pages/ProductDetails";
 import Bag from "./components/Bag";
 import CheckOut from "./pages/CheckOut/CheckOut";
 import ShippingAddressForm from "./components/ShippingAddressForm";
-import AddPayment from "./Components/AddPayment";
+import AddPayment from "./components/AddPayment";
 
 function App() {
   return (
