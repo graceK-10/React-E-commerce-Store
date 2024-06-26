@@ -13,7 +13,7 @@
   /* background-color: pink; */
 }
 
-.bag-area::after {
+/* .bag-area::after {
   content: "";
   position: absolute;
   top: 5%;
@@ -22,7 +22,7 @@
   background-color: #1A1F1680;
   left: -1px;
   border-radius: 10px; 
-}
+} */
 
 .title h3 {
   display: flex;

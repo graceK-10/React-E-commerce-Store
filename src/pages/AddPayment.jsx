@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import cards from "../Assets/card-svg.svg";
-import "../components/AddPayment.css";
+import "../css/AddPayment.css";
 import lock from "../Assets/lock.svg";
 
 function AddPayment() {
