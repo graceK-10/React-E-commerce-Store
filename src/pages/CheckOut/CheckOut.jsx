@@ -10,6 +10,8 @@ import { useState } from "react";
 import data from "../../components/Data";
 import { Link } from "react-router-dom";
 
+
+
 // Checkout component
 function CheckOut() {
   // State to store products with quantity
@@ -122,7 +124,7 @@ function CheckOut() {
                   <p id="title">{product.description}</p>
                   <p id="disc">{product.shortDescription}</p>
                   <img src={product.rating} alt={product.title} />
-                  <p>
+                  <p id="pricee">
                     {product.currency}
                     {product.price}
                   </p>
@@ -171,13 +173,14 @@ function CheckOut() {
         <Link to="/AddPayment">
           <button className="btn3">Place your order</button>
         </Link>
-      </div>
-
-      {/* Back button */}
+        {/* Back button */}
       <div className="back-btn">
         <button className="btn-4">Back</button>
       </div>
     </div>
+      </div>
+
+      
   );
 }
 
