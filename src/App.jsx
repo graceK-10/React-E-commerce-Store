@@ -14,6 +14,7 @@ function App() {
         <Route path="/item/:id" element={<ProductDetails />} />
         <Route path="/Bag" element={<Bag />} />
         <Route path="/Checkout" element={<CheckOut />} />
+        <Route path="/AddPayment" element={<AddPayment />} />
         <Route path="/ShippingAddressForm" element={<ShippingAddressForm />} />
         <Route path="/AddPayment" element={<AddPayment />} />
       </Routes>
