@@ -5,11 +5,12 @@ import "./CheckOut.css";
 import plus from "../../Assets/Plus-Button.svg";
 import minus from "../../Assets/Minus-Button.svg";
 
-
 // Importing React hooks and components
 import { useState } from "react";
 import data from "../../components/Data";
 import { Link } from "react-router-dom";
+
+
 
 // Checkout component
 function CheckOut() {
@@ -154,13 +155,16 @@ function CheckOut() {
         <Link to="/AddAdress">
           <button className="btn-3">Place your order</button>
         </Link>
-      </div>
 
-      {/* Back button */}
+        
+        {/* Back button */}
       <div className="back-btn">
         <button className="btn-4">Back</button>
       </div>
     </div>
+      </div>
+
+      
   );
 }
 

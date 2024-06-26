@@ -5,6 +5,9 @@
     align-items: center;
     margin-top: 5%;
     font-family: sans-serif;
+    margin: 0 auto;
+    background-color: #e8e8e8;
+    margin-top: 5.2%;
     
   }
   
@@ -188,6 +191,11 @@
     margin-left: 90%;
     background-color: white;
     width: 5rem;
+    border: 2px solid #626262;
+    border-radius: 4px;
+    padding: 3px 5px;
+    bottom: 300px;
+
   }
   
   .sub-total {
@@ -222,7 +230,7 @@
     margin-right: 10px;
     margin-left: 12px;
     justify-content: space-between;
-    color: ;
+    color: red;
   }
   
   .item p {
@@ -250,10 +258,15 @@
     margin-top: 10px;
   }
   .back-btn {
-    margin-left: 79%;
-    margin-top: 30px;
-    top: 50%;
-    right: 30%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .back-btn .btn-4 {
+    margin: 20rem auto; 
   }
   .btn-4 {
     width: 8rem;
@@ -261,4 +274,15 @@
     border-radius: 0.5rem;
     background-color: red;
     margin-top: 20px;
+    position: fixed;
+    bottom: -25rem;
   }
+
+  .back-btn {
+    position: absolute;
+    left: 60%;
+    transform: translateX(-50%);
+  }
+
+  
+  
