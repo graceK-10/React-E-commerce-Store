@@ -25,17 +25,21 @@ function CheckOut() {
   const [gst, setGst] = useState(0);
   const [giftCard, setGiftCard] = useState(0);
 
-  // Function to update quantity of a product
-  const updateQuantity = (productId, increment) => {
-    // Update product quantity in state
-    setProductsState(prevProducts => {
-      const newProducts = [...prevProducts];
-      const productToUpdate = newProducts.find(product => product.id === productId);
-      if (productToUpdate) {
-        productToUpdate.quantity += increment ? 1 : -1;
+// Function to update quantity of a product
+const updateQuantity = (productId, increment) => {
+  // Update product quantity in state
+  setProductsState(prevProducts => {
+    const newProducts = [...prevProducts];
+    const productToUpdate = newProducts.find(product => product.id === productId);
+    if (productToUpdate) {
+      if (increment) {
+        productToUpdate.quantity += 1;
+      } else if (productToUpdate.quantity > 1) {
+        productToUpdate.quantity -= 1;
       }
-      return newProducts;
-    });
+    }
+    return newProducts;
+  });
 
     //to calculate new subtotal, shipping, GST, and gift card values
     const totalPrice = productsState.reduce((acc, product) => acc + product.price * product.quantity, 0);
@@ -112,11 +116,11 @@ function CheckOut() {
                   </p>
                   <div className="quantity">
                     <div onClick={() => incrementQuantity(product.id)}>
-                      <img id="incr" src={plus} alt="plus" />
+                      <img id="incr" src={minus} alt="minus" />
                     </div>
                     <p>{product.quantity}</p>
                     <div onClick={() => decrementQuantity(product.id)}>
-                      <img id="decr" src={minus} alt="minus" />
+                      <img id="decr" src={plus} alt="plus" />
                     </div>
                   </div>
                 </div>
