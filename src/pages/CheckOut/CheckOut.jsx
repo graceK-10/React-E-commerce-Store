@@ -10,8 +10,6 @@ import { useState } from "react";
 import data from "../../components/Data";
 import { Link } from "react-router-dom";
 
-
-
 // Checkout component
 function CheckOut() {
   // State to store products with quantity
@@ -25,23 +23,23 @@ function CheckOut() {
   const [gst, setGst] = useState(0);
   const [giftCard, setGiftCard] = useState(0);
 
-// Function to update quantity of a product
-const updateQuantity = (productId, increment) => {
-  // Update product quantity in state
-  setProductsState(prevProducts => {
-    const newProducts = [...prevProducts];
-    const productToUpdate = newProducts.find(product => product.id === productId);
-    if (productToUpdate) {
-      if (increment) {
-        productToUpdate.quantity += 1;
-      } else if (productToUpdate.quantity > 1) {
-        productToUpdate.quantity -= 1;
+  // Function to update quantity of a product
+  const updateQuantity = (productId, increment) => {
+    // Update product quantity in state
+    setProductsState(prevProducts => {
+      const newProducts = [...prevProducts];
+      const productToUpdate = newProducts.find(product => product.id === productId);
+      if (productToUpdate) {
+        if (increment) {
+          productToUpdate.quantity += 1;
+        } else if (productToUpdate.quantity > 1) {
+          productToUpdate.quantity -= 1;
+        }
       }
-    }
-    return newProducts;
-  });
+      return newProducts;
+    });
 
-    //to calculate new subtotal, shipping, GST, and gift card values
+    // Calculate new subtotal, shipping, GST, and gift card values
     const totalPrice = productsState.reduce((acc, product) => acc + product.price * product.quantity, 0);
     setItems(totalPrice.toFixed(2));
 
@@ -55,15 +53,14 @@ const updateQuantity = (productId, increment) => {
     setGiftCard(totalGiftCard.toFixed(2));
 
    
-    const total = isNaN(parseFloat(items) + parseFloat(shipping) + parseFloat(gst) - parseFloat(giftCard)) ? 0 : parseFloat(items) + parseFloat(shipping) + parseFloat(gst) - parseFloat(giftCard);
   };
 
-  // functions to increment and decrement quantity
+  // Functions to increment and decrement quantity
   const incrementQuantity = productId => updateQuantity(productId, true);
   const decrementQuantity = productId => updateQuantity(productId, false);
 
   // Calculate total order value
-  const total = items + shipping + gst - giftCard;
+  const totalOrder = productsState.reduce((acc, product) => acc + product.price * product.quantity, 0) + 10 + (productsState.reduce((acc, product) => acc + product.price * product.quantity, 0) * 0.05) - 20;
 
   return (
     <div className="container">
@@ -115,12 +112,12 @@ const updateQuantity = (productId, increment) => {
                     {product.price}
                   </p>
                   <div className="quantity">
-                    <div onClick={() => incrementQuantity(product.id)}>
-                      <img id="incr" src={minus} alt="minus" />
+                  <div onClick={() => decrementQuantity(product.id)}>
+                      <img id="decr" src={plus} alt="plus" />
                     </div>
                     <p>{product.quantity}</p>
-                    <div onClick={() => decrementQuantity(product.id)}>
-                      <img id="decr" src={plus} alt="plus" />
+                    <div onClick={() => incrementQuantity(product.id)}>
+                      <img id="incr" src={minus} alt="minus" />
                     </div>
                   </div>
                 </div>
@@ -153,7 +150,7 @@ const updateQuantity = (productId, increment) => {
         <hr></hr>
         <div className="item">
           <p id="red">Order total:</p>
-          <p id="red">${total}</p>
+          <p id="red">${totalOrder.toFixed(2)}</p>
         </div>
         <hr></hr>
         <Link to="/AddAdress">
