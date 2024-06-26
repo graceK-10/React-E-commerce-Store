@@ -3,8 +3,8 @@ import MenuSidebar from "../components/MenuSidebar";
 import Bagsidebar from "../components/Bagsidebar";
 import { Link } from "react-router-dom";
 import "../css/ProductDetails.css";
-import cart from "../assets/addcart.svg";
-import stars from "../assets/Special.png";
+import cart from "../Assets/addcart.svg";
+import stars from "../Assets/Special.png";
 import { useLocation } from "react-router-dom";
 
 const ProductDetails = () => {
