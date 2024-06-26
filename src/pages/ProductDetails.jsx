@@ -21,16 +21,16 @@ const ProductDetails = () => {
       <MenuSidebar />
       <Link
         to="/"
-        className="back-link text-lg block no-underline text-[#1a1f16] font-bold absolute left-[11rem] top-[50px]"
+        className="font-cabin back-link text-lg block font-bold text-[#1a1f16] absolute left-[11rem] top-[50px]"
       >
         &lt;&nbsp;&nbsp;Back
       </Link>
-      <div className="product-list ml-[10rem] mr-[25rem] relative font-sans">
+      <div className="product-list relative ml-[10rem] mr-[25rem] font-sans">
         {/* Render item details */}
         <div className="product" key={item.id}>
           {/* Render images */}
-          <div className="Container flex justify-between w-full h-auto">
-            <div className="smallImg flex flex-col gap-[5px] ml-[1rem]">
+          <div className="container flex justify-between w-full">
+            <div className="smallImg">
               {/* Render small images */}
               <img
                 className="smallImage w-[4rem] h-[58px] mb-[10px] rounded-[10px] object-cover"
