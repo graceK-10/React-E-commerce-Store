@@ -272,10 +272,12 @@
     width: 8rem;
     height: 2.5rem;
     border-radius: 0.5rem;
-    background-color: red;
+    background-color: black;
     margin-top: 20px;
     position: fixed;
     bottom: -25rem;
+    background-color: rgb(233, 233, 233);
+    border: 2px solid black;
   }
 
   .back-btn {
@@ -284,5 +286,14 @@
     transform: translateX(-50%);
   }
 
+
+#disc {
+  color:gray;
+  font-size: large !important;
+  font-weight: lighter !important;
   
+  
+}
+
+#
   

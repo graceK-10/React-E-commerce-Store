@@ -156,10 +156,10 @@ function CheckOut() {
           <button className="btn-3">Place your order</button>
         </Link>
 
-        
+
         {/* Back button */}
       <div className="back-btn">
-        <button className="btn-4">Back</button>
+      <button class="larger-button">&larr; Back</button>
       </div>
     </div>
       </div>
