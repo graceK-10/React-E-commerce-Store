@@ -106,7 +106,7 @@ function CheckOut() {
                   <p id="title">{product.description}</p>
                   <p id="disc">{product.shortDescription}</p>
                   <img src={product.rating} alt={product.title} />
-                  <p>
+                  <p id="pricee">
                     {product.currency}
                     {product.price}
                   </p>
@@ -155,11 +155,9 @@ function CheckOut() {
         <Link to="/AddAdress">
           <button className="btn-3">Place your order</button>
         </Link>
-
-
         {/* Back button */}
       <div className="back-btn">
-      <button class="larger-button">&larr; Back</button>
+        <button className="btn-4">Back</button>
       </div>
     </div>
       </div>

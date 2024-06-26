@@ -218,7 +218,7 @@
   }
   
   .sub-total h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-left: 1rem;
     margin-top: 1rem;
   }
@@ -284,16 +284,23 @@
     position: absolute;
     left: 60%;
     transform: translateX(-50%);
+    font-size: 1.2rem;
   }
 
+h3 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+  
 
 #disc {
-  color:gray;
-  font-size: large !important;
+  font-size: 1.3rem !important;
   font-weight: lighter !important;
-  
-  
 }
 
-
+#pricee {
+  color: gray;
+  font-size: 1.3rem !important;
+  font-weight: lighter !important;
+}
   
