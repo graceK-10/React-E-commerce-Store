@@ -7,9 +7,12 @@ body {
   }
   
   .product-img {
-
-    /* width: 242px; */
     height: 100%;
+  }
+
+  .product {
+    display: flex;
+    margin-top: 10%;
   }
 
   

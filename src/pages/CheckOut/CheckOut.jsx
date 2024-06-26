@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 function CheckOut() {
   // State to store products with quantity
   const [productsState, setProductsState] = useState(
-    data.map(product => ({ ...product, quantity: 1 }))
+    data.map((product) => ({ ...product, quantity: 1 }))
   );
 
   // State to store subtotal, shipping, GST, and gift card values
@@ -28,9 +28,11 @@ function CheckOut() {
   // Function to update quantity of a product
   const updateQuantity = (productId, increment) => {
     // Update product quantity in state
-    setProductsState(prevProducts => {
+    setProductsState((prevProducts) => {
       const newProducts = [...prevProducts];
-      const productToUpdate = newProducts.find(product => product.id === productId);
+      const productToUpdate = newProducts.find(
+        (product) => product.id === productId
+      );
       if (productToUpdate) {
         productToUpdate.quantity += increment ? 1 : -1;
       }
@@ -38,25 +40,37 @@ function CheckOut() {
     });
 
     //to calculate new subtotal, shipping, GST, and gift card values
-    const totalPrice = productsState.reduce((acc, product) => acc + product.price * product.quantity, 0);
+    const totalPrice = productsState.reduce(
+      (acc, product) => acc + product.price * product.quantity,
+      0
+    );
     setItems(totalPrice.toFixed(2));
 
-    const totalShipping = 10; 
+    const totalShipping = 10;
     setShipping(totalShipping.toFixed(2));
 
-    const totalGst = totalPrice * 0.05; 
+    const totalGst = totalPrice * 0.05;
     setGst(totalGst.toFixed(2));
 
     const totalGiftCard = 20;
     setGiftCard(totalGiftCard.toFixed(2));
 
-   
-    const total = isNaN(parseFloat(items) + parseFloat(shipping) + parseFloat(gst) - parseFloat(giftCard)) ? 0 : parseFloat(items) + parseFloat(shipping) + parseFloat(gst) - parseFloat(giftCard);
+    const total = isNaN(
+      parseFloat(items) +
+        parseFloat(shipping) +
+        parseFloat(gst) -
+        parseFloat(giftCard)
+    )
+      ? 0
+      : parseFloat(items) +
+        parseFloat(shipping) +
+        parseFloat(gst) -
+        parseFloat(giftCard);
   };
 
   // functions to increment and decrement quantity
-  const incrementQuantity = productId => updateQuantity(productId, true);
-  const decrementQuantity = productId => updateQuantity(productId, false);
+  const incrementQuantity = (productId) => updateQuantity(productId, true);
+  const decrementQuantity = (productId) => updateQuantity(productId, false);
 
   // Calculate total order value
   const total = items + shipping + gst - giftCard;
@@ -70,7 +84,9 @@ function CheckOut() {
         <p>123 Plae Grond Street</p>
         <p>Vermont, California</p>
         <p>United States of America</p>
-        <div className="btn"><button>Change</button></div>
+        <div className="btn">
+          <button>Change</button>
+        </div>
       </div>
 
       {/* Payment method section */}
@@ -88,7 +104,9 @@ function CheckOut() {
             Billing adress same as Shipping adress
           </label>
         </div>
-        <div className="btn"><button>Change</button></div>
+        <div className="btn">
+          <button>Change</button>
+        </div>
       </div>
 
       {/* Review your bag section */}
@@ -152,8 +170,8 @@ function CheckOut() {
           <p id="red">${total}</p>
         </div>
         <hr></hr>
-        <Link to="/AddAdress">
-          <button className="btn-3">Place your order</button>
+        <Link to="/AddPayment">
+          <button className="btn3">Place your order</button>
         </Link>
         {/* Back button */}
       <div className="back-btn">

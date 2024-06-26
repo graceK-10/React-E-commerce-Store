@@ -100,8 +100,8 @@ const HomePage = () => {
   return (
     <>
       <MenuSidebar /> {/* Sidebar component */}
-      <div className="content-frame flex flex-col items-center p-6 gap-2 absolute w-[1148px] h-[999px] left-[122px] top-0 overflow-hidden">
-        <div className="top-bar flex flex-col items-start p-2 gap-2 w-[573px]">
+      <div className="content-frame flex flex-col items-center p-2 gap-2 w-full md:w-[800px] lg:w-[1148px] mx-[8rem] ">
+        <div className="top-bar flex flex-col items-start p-2 gap-2 w-[573px] md:w-[573px]">
           <div className="input flex flex-col justify-center items-start p-0 gap-2">
             <div className="label flex items-center text-lg gap-2 w-[8rem] h-5 font-cabin text-fontGrey">
               Search Item
@@ -118,20 +118,19 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-
-        <div className="content-area">
-          <div className="content-row flex justify-center items-center p-0 gap-8 w-[905px] h-[420px]">
+        <div className="content-area w-full">
+          <div className="content-row flex justify-start items-center p-0 gap-8 w-full md:w-[600px] lg:w-[1145px] h-auto lg:h-[420px] flex-wrap">
             {renderFixedRow(filteredProducts.slice(0, 4))}{" "}
             {/* Render first row of products */}
           </div>
-          <div className="content-row flex justify-center items-center p-0 gap-8 w-[905px] h-[420px]">
+          <div className="content-row flex justify-start items-center p-0 gap-8 w-full md:w-[600px] lg:w-[1145px] h-auto lg:h-[420px] flex-wrap">
             {renderFixedRow(filteredProducts.slice(4, 8))}{" "}
             {/* Render second row of products */}
           </div>
         </div>
+        {/* Grey line to the right of content area */}
+        <div className="hidden lg:block fixed top-16 right-[22rem] w-[4px] h-[115%] bg-gray-500"></div>{" "}
       </div>
-      {/* Grey line to the right of content area */}
-      {/* <div className="absolute top-16 right-[20rem] w-[5px] h-[115%] bg-gray-400"></div>{" "} */}
       <Bagsidebar selectedItem={clickedItem} />
     </>
   );
