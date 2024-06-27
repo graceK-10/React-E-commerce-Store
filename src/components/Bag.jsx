@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import SideBar2 from "./Bagsidebar";
 import "../css/ShoppingBag.css";
 import SideBar from "./MenuSidebar";
-import plus from "../Assets/Name=minus.svg";
+import plus from "../Assets/Increase-Button.svg";
 import minus from "../Assets/Decrease-Button.svg";
 
 function Bag() {
