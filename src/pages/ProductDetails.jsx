@@ -79,7 +79,7 @@ const ProductDetails = () => {
         <span className="text-[20px]">Add to Bag</span>
       </div>
       {/* Vertical Grey line to the right of content area */}
-      <div className="absolute top-[3rem] right-[22rem] w-[4px] h-[110%] bg-gray-500"></div>{" "}
+      {/* <div className="absolute top-[3rem] right-[22rem] w-[4px] h-[110%] bg-gray-500"></div> {" "} */}
       {/* Horizontal Grey line to the right of content area */}
       <div className="grey-line2 absolute top-[34rem] right-[29%] w-[60%] h-[3px] bg-gray-500 rounded-[10%]"></div>
       <div className="paragraph ml-[11rem] mr-[25rem] font-sans">
