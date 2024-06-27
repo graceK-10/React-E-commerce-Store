@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import MenuSidebar from "../components/MenuSidebar";
 import Bagsidebar from "../components/Bagsidebar";
 import data from "../components/Data";
-import bagadd from "../Assets/Bag add.svg";
+import bagadd from "../Assets/Name=bag-add.svg";
 import "../index.css";
 
 const HomePage = () => {
