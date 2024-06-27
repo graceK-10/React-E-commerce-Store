@@ -1,0 +1,126 @@
+.shopping {
+    margin-left: 10rem;
+    margin-right: 21rem;
+    margin-top: 2%;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    word-spacing: 0.3rem;
+  }
+  
+  .shopping h1{
+    margin-bottom: 4rem;
+  }
+  
+  .items-cards1 {
+    border: 1px solid rgba(0, 0, 0, 0);
+    margin-bottom: 4rem;
+    background-color: white;
+    width: 95% !important;
+    border-radius: 1rem;
+  }
+  
+  .products-containers {
+    display: flex;
+  }
+  
+  .products-images {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .products-infos {
+    flex: 1 1 auto;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .products-infos #title{
+  color: grey;
+  }
+  
+  .products-infos #disc {
+  font-size: 1rem; /* Change the font size to your desired value */
+  margin-top: 20px;
+  word-spacing: -1px;
+  font-weight: bold;
+  }
+  
+  .products-infos img{
+  margin-left: -1rem;
+  }
+  
+  .quantity {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rem;
+  margin-top: -3.4rem;
+  
+  }
+  
+  .quantity img#decr {
+  margin-left: 0.5rem; /* Adjusted margin to move the minus button to the left */
+  }
+  
+  .quantity img#incr {
+  margin-right: 0.5rem; /* Adjusted margin to move the minus button to the left */
+  }
+  
+  /* Media Queries for Responsive Design */
+
+@media (max-width: 1200px) {
+  .shopping {
+    margin-left: 5rem;
+    margin-right: 16rem;
+  }
+
+  .quantity {
+    margin-left: 25rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .shopping {
+    margin-left: 4rem;
+    margin-right: 14rem;
+  }
+
+  .quantity {
+    margin-left: 20rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .shopping {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .quantity {
+    margin-left: 15rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .shopping {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .quantity {
+    margin-left: 10rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .shopping {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .quantity {
+    margin-left: 5rem;
+  }
+}
