@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import MenuSidebar from "../components/MenuSidebar";
 import Bagsidebar from "../components/Bagsidebar";
 import data from "../components/Data";
-import bagadd from "../Assets/Bag add.svg";
+import bagadd from "../Assets/Add-Bag.svg";
 import "../index.css";
 
 const HomePage = () => {
@@ -129,7 +129,7 @@ const HomePage = () => {
           </div>
         </div>
         {/* Grey line to the right of content area */}
-       {/* <div className="hidden lg:block fixed top-16 right-[22rem] w-[4px] h-[115%] bg-gray-500"></div> {" "} */}
+        {/* <div className="hidden lg:block fixed top-16 right-[22rem] w-[4px] h-[115%] bg-gray-500"></div> {" "} */}
       </div>
       <Bagsidebar selectedItem={clickedItem} />
     </>
