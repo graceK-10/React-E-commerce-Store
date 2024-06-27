@@ -57,6 +57,7 @@ function CheckOut() {
     const totalGiftCard = 20;
     setGiftCard(totalGiftCard.toFixed(2));
 
+    // eslint-disable-next-line
     const total = isNaN(
       parseFloat(items) +
         parseFloat(shipping) +
