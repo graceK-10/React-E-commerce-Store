@@ -57,6 +57,7 @@ function CheckOut() {
     const totalGiftCard = 20;
     setGiftCard(totalGiftCard.toFixed(2));
 
+    // eslint-disable-next-line
     const total = isNaN(
       parseFloat(items) +
         parseFloat(shipping) +
@@ -75,7 +76,18 @@ function CheckOut() {
   const decrementQuantity = (productId) => updateQuantity(productId, false);
 
   // Calculate total order value
-  const totalOrder = productsState.reduce((acc, product) => acc + product.price * product.quantity, 0) + 10 + (productsState.reduce((acc, product) => acc + product.price * product.quantity, 0) * 0.05) - 20;
+  const totalOrder =
+    productsState.reduce(
+      (acc, product) => acc + product.price * product.quantity,
+      0
+    ) +
+    10 +
+    productsState.reduce(
+      (acc, product) => acc + product.price * product.quantity,
+      0
+    ) *
+      0.05 -
+    20;
 
   return (
     <div className="container">
@@ -87,7 +99,9 @@ function CheckOut() {
         <p>Vermont, California</p>
         <p>United States of America</p>
         <div className="btn">
-          <button>Change</button>
+          <Link to="/ShippingAddressForm">
+            <button>Change</button>
+          </Link>
         </div>
       </div>
 
@@ -103,11 +117,13 @@ function CheckOut() {
         <div className="checkbox">
           <input type="checkbox" id="myCheckbox" name="myCheckbox" />
           <label htmlFor="myCheckbox">
-            Billing adress same as Shipping adress
+            Billing address same as Shipping Address
           </label>
         </div>
         <div className="btn">
-          <button>Change</button>
+          <Link to="/AddPayment">
+            <button>Change</button>
+          </Link>
         </div>
       </div>
 
@@ -131,7 +147,7 @@ function CheckOut() {
                     {product.price}
                   </p>
                   <div className="quantity">
-                  <div onClick={() => decrementQuantity(product.id)}>
+                    <div onClick={() => decrementQuantity(product.id)}>
                       <img id="decr" src={plus} alt="plus" />
                     </div>
                     <p>{product.quantity}</p>
@@ -173,16 +189,24 @@ function CheckOut() {
         </div>
         <hr></hr>
         <Link to="/AddPayment">
-          <button className="btn3">Place your order</button>
+          <div className="button2">
+            <span>Place your order</span>
+          </div>
         </Link>
         {/* Back button */}
-      <div className="back-btn">
-        <button className="btn-4">Back</button>
+        <div className="back-btn">
+          <Link to="/Bag">
+            <button className="btn-4">Back</button>
+          </Link>
+        </div>
+        {/* <Link to="/bag">
+          <button className="btn4">
+            <img src={backImage} alt="Back" className="back-icon" />
+            Back
+          </button>
+        </Link> */}
       </div>
     </div>
-      </div>
-
-      
   );
 }
 

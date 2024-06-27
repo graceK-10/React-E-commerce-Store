@@ -13,7 +13,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start; 
-  width: 50%;
+  /* width: 50%; */
+  
 }
 .bottom-container {
   border: 2px solid rgba(0, 0, 0, 0); 
@@ -23,7 +24,7 @@
   flex-direction: column;
   align-items: flex-start; 
   border-radius: 0.7em;
-  width: 50%;
+  /* width: 50%; */
   margin-top: 30px;
 }
 .card input {
@@ -34,11 +35,13 @@
   width: 42rem;
   height: 3.5rem;
 }
+
 .form-group {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
   margin-left: 20px;
+  
 }
 .Date {
   flex-wrap: wrap;
@@ -51,6 +54,7 @@
     box-sizing: border-box;
     padding: 10px;
     height: 3rem;
+    
   }
 .top-container p {
   margin: 10px 0; 
@@ -80,13 +84,25 @@
   background-color: rgb(8, 8, 8);
   color: white;
 }
-.la-line{
+.la-line {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
+
 #la {
-  color: #02D693;
   display: flex;
+  align-items: center;
+  color: #02d693;
 }
+
+.lock-icon {
+  margin-right: 5px;
+}
+
+.secure-text {
+  margin: 0;
+}
+
 
