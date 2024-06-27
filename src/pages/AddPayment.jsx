@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import cards from "../Assets/Card-Icon.svg";
 import "../css/AddPayment.css";
-import lock from "../Assets/Logo.svg";
+import lock from "../Assets/lock.svg";
 
 function AddPayment() {
   //renders a simple interface for selecting and adding a payment card.
@@ -59,11 +59,14 @@ function AddPayment() {
               </div>
             </Link>
             <div className="la-line">
-            <Link to="/checkout">
-              <p id="ba">Back</p>
+              <Link to="/checkout">
+                <p id="ba">Back</p>
               </Link>
-              <p id="la"><img src={lock} alt=""></img>Secure Connection</p>
-              </div>
+              <p id="la">
+                <img src={lock} alt="" className="lock-icon" />
+                <span className="secure-text">Secure Connection</span>
+              </p>
+            </div>
           </form>
         </div>
       </div>

@@ -194,8 +194,16 @@ function CheckOut() {
         </Link>
         {/* Back button */}
         <div className="back-btn">
-          <button className="btn-4">Back</button>
+          <Link to="/Bag">
+            <button className="btn-4">Back</button>
+          </Link>
         </div>
+        {/* <Link to="/bag">
+          <button className="btn4">
+            <img src={backImage} alt="Back" className="back-icon" />
+            Back
+          </button>
+        </Link> */}
       </div>
     </div>
   );
