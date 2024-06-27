@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import MenuSidebar from "../components/MenuSidebar";
 import Bagsidebar from "../components/Bagsidebar";
 import data from "../components/Data";
-import AddBag2 from "../Assets/Add-Bag-2.svg";
+import bagadd from "../Assets/Bag add.svg";
 import "../index.css";
 
 const HomePage = () => {
@@ -83,7 +83,7 @@ const HomePage = () => {
                 {" "}
                 {/* Handle click on view */}
                 <img
-                  src={AddBag2}
+                  src={bagadd}
                   alt="Add to Bag"
                   className="bag-icon w-[3rem] h-5"
                 />{" "}
