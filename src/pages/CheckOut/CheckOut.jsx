@@ -32,7 +32,11 @@ function CheckOut() {
         (product) => product.id === productId
       );
       if (productToUpdate) {
-        productToUpdate.quantity += increment ? 1 : -1;
+        if (increment) {
+          productToUpdate.quantity += 1;
+        } else if (productToUpdate.quantity > 1) {
+          productToUpdate.quantity -= 1;
+        }
       }
       return newProducts;
     });
@@ -71,7 +75,7 @@ function CheckOut() {
   const decrementQuantity = (productId) => updateQuantity(productId, false);
 
   // Calculate total order value
-  const total = items + shipping + gst - giftCard;
+  const totalOrder = productsState.reduce((acc, product) => acc + product.price * product.quantity, 0) + 10 + (productsState.reduce((acc, product) => acc + product.price * product.quantity, 0) * 0.05) - 20;
 
   return (
     <div className="container">
@@ -122,17 +126,17 @@ function CheckOut() {
                   <p id="title">{product.description}</p>
                   <p id="disc">{product.shortDescription}</p>
                   <img src={product.rating} alt={product.title} />
-                  <p>
+                  <p id="pricee">
                     {product.currency}
                     {product.price}
                   </p>
                   <div className="quantity">
-                    <div onClick={() => incrementQuantity(product.id)}>
-                      <img id="incr" src={plus} alt="plus" />
+                  <div onClick={() => decrementQuantity(product.id)}>
+                      <img id="decr" src={plus} alt="plus" />
                     </div>
                     <p>{product.quantity}</p>
-                    <div onClick={() => decrementQuantity(product.id)}>
-                      <img id="decr" src={minus} alt="minus" />
+                    <div onClick={() => incrementQuantity(product.id)}>
+                      <img id="incr" src={minus} alt="minus" />
                     </div>
                   </div>
                 </div>
@@ -165,19 +169,20 @@ function CheckOut() {
         <hr></hr>
         <div className="item">
           <p id="red">Order total:</p>
-          <p id="red">${total}</p>
+          <p id="red">${totalOrder.toFixed(2)}</p>
         </div>
         <hr></hr>
         <Link to="/AddPayment">
           <button className="btn3">Place your order</button>
         </Link>
-      </div>
-
-      {/* Back button */}
+        {/* Back button */}
       <div className="back-btn">
         <button className="btn-4">Back</button>
       </div>
     </div>
+      </div>
+
+      
   );
 }
 
