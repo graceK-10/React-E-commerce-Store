@@ -13,8 +13,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start; 
-  border-radius: 0.7em;
   width: 50%;
+  
 }
 .bottom-container {
   border: 2px solid rgba(0, 0, 0, 0); 
@@ -35,11 +35,13 @@
   width: 42rem;
   height: 3.5rem;
 }
+
 .form-group {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
   margin-left: 20px;
+  
 }
 .Date {
   flex-wrap: wrap;
@@ -52,6 +54,7 @@
     box-sizing: border-box;
     padding: 10px;
     height: 3rem;
+    
   }
 .top-container p {
   margin: 10px 0; 
@@ -78,7 +81,7 @@
   height: 3rem;
   border-radius: 0.5rem;
   border: none;
-  background-color: rgb(3, 16, 43);
+  background-color: rgb(8, 8, 8);
   color: white;
 }
 .la-line{
