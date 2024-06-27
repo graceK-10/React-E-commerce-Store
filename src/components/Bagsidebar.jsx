@@ -88,43 +88,41 @@ const SideBar2 = ({ selectedItem }) => {
 
   return (
     <div>
-    <div className="vertical-line" />
-    <div className="bag-area">
-      <div className="title">
-        <h3>bag</h3>
+      <div className="vertical-line" />
+      <div className="bag-area">
+        <div className="title">
+          <h3>bag</h3>
+        </div>
+        <div className="bag-items">
+          {/* Render rows */}
+          {rows.map((row, index) => (
+            <div className="row" key={index}>
+              {/* Render items in the row */}
+              {row.map((item) => (
+                <div className="bag-item" key={item.id}>
+                  <img src={item.imageUrl} alt="Bag item" />
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+        {location.pathname === "/bag" && ( // Render total only on bag page
+          <div className="total-price">Bag Total: ${totalPrice.toFixed(2)}</div>
+        )}
+        {location.pathname === "/bag" ? (
+          <Link to="/checkout" className="button">
+            <div>
+              <span>Checkout</span>
+            </div>
+          </Link>
+        ) : (
+          <Link to="/bag" className="button">
+            <div>
+              <span>ViewBag</span>
+            </div>
+          </Link>
+        )}
       </div>
-      <div className="bag-items">
-        {/* Render rows */}
-        {rows.map((row, index) => (
-          <div className="row" key={index}>
-            {/* Render items in the row */}
-            {row.map((item) => (
-              <div className="bag-item" key={item.id}>
-                <img src={item.imageUrl} alt="Bag item" />
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
-      {location.pathname === "/bag" && ( // Render total only on bag page
-        <div className="total-price">Bag Total: ${totalPrice.toFixed(2)}</div>
-      )}
-      {location.pathname === "/bag" ? (
-        <Link to="/checkout" className="button">
-          <div>
-           
-            <span>Checkout</span>
-          </div>
-        </Link>
-      ) : (
-        <Link to="/bag" className="button">
-          <div>
-            
-            <span>ViewBag</span>
-          </div>
-        </Link>
-      )}
-    </div>
     </div>
   );
 };
