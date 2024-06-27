@@ -14,7 +14,6 @@
   flex-direction: column;
   align-items: flex-start; 
   width: 50%;
-  
 }
 .bottom-container {
   border: 2px solid rgba(0, 0, 0, 0); 
@@ -35,13 +34,11 @@
   width: 42rem;
   height: 3.5rem;
 }
-
 .form-group {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
   margin-left: 20px;
-  
 }
 .Date {
   flex-wrap: wrap;
@@ -54,7 +51,6 @@
     box-sizing: border-box;
     padding: 10px;
     height: 3rem;
-    
   }
 .top-container p {
   margin: 10px 0; 
@@ -88,9 +84,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
 #la {
   color: #02D693;
+  display: flex;
 }
 

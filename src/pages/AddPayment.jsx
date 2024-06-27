@@ -62,7 +62,9 @@ function AddPayment() {
             <Link to="/checkout">
               <p id="ba">Back</p>
               </Link>
-              <p id="la"><img src={lock} alt=""></img>Secure Connection</p>
+              <p id="la">
+                <img src={lock} alt="">
+                </img>Secure Connection</p>
               </div>
           </form>
         </div>
