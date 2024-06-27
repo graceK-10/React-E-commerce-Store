@@ -168,17 +168,28 @@
   
   .quantity {
     display: flex;
-    flex-direction: row;
-    margin-left: 30rem;
-    margin-top: -3.4rem;
+    align-items: center;
+    justify-content: center;
   }
   
+  .quantity div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .quantity p {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  
+  
   .quantity img#decr {
-    margin-left: 0.5rem; 
+    margin-left: -1rem; 
   }
   
   .quantity img#incr {
-    margin-right: 0.5rem; 
+    margin-left: 0.5rem; 
   }
   
   hr {
@@ -308,4 +319,26 @@ h3 {
   font-size: 1.3rem !important;
   font-weight: lighter !important;
 }
+
+.button2 {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 28px;
+  gap: 8px;
+  height: 15%;
+  width: 100%;
+  background: #1a1f16;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+}
   
+.button2 span {
+  color: white;
+  margin-left: 8px;
+  margin-top: -5px;
+}
