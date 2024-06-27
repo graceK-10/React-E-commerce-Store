@@ -13,6 +13,8 @@ body {
   .product {
     display: flex;
     margin-top: 10%;
+    transform: translateX(-20px);
   }
 
+ 
   

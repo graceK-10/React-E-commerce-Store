@@ -87,6 +87,8 @@ const SideBar2 = ({ selectedItem }) => {
   }, []);
 
   return (
+    <div>
+    <div className="vertical-line" />
     <div className="bag-area">
       <div className="title">
         <h3>bag</h3>
@@ -121,6 +123,7 @@ const SideBar2 = ({ selectedItem }) => {
           </div>
         </Link>
       )}
+    </div>
     </div>
   );
 };
