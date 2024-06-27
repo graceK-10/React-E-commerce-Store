@@ -117,8 +117,8 @@ const SideBar2 = ({ selectedItem }) => {
       ) : (
         <Link to="/bag" className="button">
           <div>
-            <img src={cart} alt="Logo" />
-            <span>View Bag</span>
+            
+            <span>ViewBag</span>
           </div>
         </Link>
       )}
