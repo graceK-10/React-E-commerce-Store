@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import cards from "../Assets/card-svg.svg";
+import cards from "../Assets/Card-Icon.svg";
 import "../css/AddPayment.css";
-import lock from "../Assets/lock.svg";
+import lock from "../Assets/Close-icon.svg";
 
 function AddPayment() {
   //renders a simple interface for selecting and adding a payment card.
